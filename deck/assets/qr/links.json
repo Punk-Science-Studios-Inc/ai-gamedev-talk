@@ -20,9 +20,9 @@
  "customuse": "https://customuse.com",
  "flyio": "https://fly.io",
  "websavers": "https://websavers.ca",
- "nostr": "https://nostr.com",
  "cohere": "https://cohere.com",
  "punkscience": "https://punkscience.ca",
  "agent-skills": "https://github.com/punkscience/agent-skills",
- "asd-ste100-org": "https://www.asd-ste100.org/"
+ "asd-ste100-org": "https://www.asd-ste100.org/",
+ "nostr-book": "https://nostr-book.org"
 }

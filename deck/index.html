@@ -168,7 +168,7 @@
 
 <!-- 9 illustration -->
 <section class="slide" id="horse">
-  <div class="titleblock"><div class="kicker">The model</div><h1 class="title">A brain full of facts</h1></div>
+  <div class="titleblock"><div class="kicker">The model</div><h1 class="title">A brain full of inert knowledge, with no action</h1></div>
   <div class="content">
     <div class="statement" style="position:absolute;left:0;top:200px;font-size:72px">No legs,<br>no direction.</div>
     <div class="caption" style="position:absolute;left:0;top:420px;width:820px">The harness is the tool for intention and focus. It gives the horse the two things it doesn't have on its own: reach, and restraint.</div>
@@ -311,7 +311,7 @@ Let me know if you'd like any changes!
 
 <!-- 16 statement -->
 <section class="slide stmt" id="rule">
-  <div class="statement">Frontier to plan.<br>Cheap to grind.<br>Local when it's <span class="signal">yours</span>.</div>
+  <div class="statement" style="font-size:80px">Frontier to plan.<br>Cheap to grind.<br>Local when you can afford the hardware,<br>or <span class="signal">need privacy</span>.</div>
   <div class="footer"><span>04 · The model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
@@ -444,7 +444,7 @@ and lime only ever marks where a human is still required.
       </div>
       <div class="well">
         <div class="lead">Desktops <span class="dim">hide and simplify.</span></div>
-        <div class="body">And somehow end up more complicated. In Claude Desktop I honestly don't know where I'm supposed to do what, and when it works on a codebase I can't tell you where my changes actually landed. Same with Buzz.<br><br>A chat window with a repo attached is still a chat window.</div>
+        <div class="body">And somehow end up more complicated. In Claude Desktop I don't know where I'm supposed to do what, and when it works on a codebase I can't tell you where my changes actually landed. Same with Buzz.<br><br>A chat window with a repo attached is still a chat window.</div>
       </div>
     </div>
     <div class="caption" style="position:absolute;bottom:0;left:0">My daily loop: plan in the vault, grill the plan, init the folder, implement in small commits, review, repeat.</div>
@@ -566,16 +566,16 @@ Scenario: a check-in after a walk
 
 <!-- 29 the agent can -->
 <section class="slide" id="agentcan">
-  <div class="titleblock"><div class="kicker">Architecture is for the two parties who still have to work in the code: the agent, and the team</div><h1 class="title">Is this codebase ready for an agent?</h1></div>
+  <div class="titleblock"><div class="kicker">Architecture is for the two parties who still have to work in the code: the agent, and the team</div><h1 class="title">When is a codebase ready for an agent?</h1></div>
   <div class="content">
-    <ul class="tips">
-      <li class="frag"><b>Find</b> where a thing lives. One system per folder, named for what it is.</li>
-      <li class="frag"><b>Build</b> it itself. One command. No clicking, no "works on my machine."</li>
-      <li class="frag"><b>Test</b> it itself. Tests beside the module, mapped to the Gherkin in the plan.</li>
-      <li class="frag"><b>Read</b> the plan. AGENTS.md, the GDD, the art bible, all in the repo.</li>
-      <li class="frag"><b>See</b> the result. A dev server, a screenshot tool, a render script, a log it can grep.</li>
+    <ul class="tips" style="width:1728px">
+      <li class="frag"><b>When it's indexed.</b> The codebase-memory skill builds a knowledge graph of the functions, classes and calls, so "who calls this?" is a query the agent runs, not a hundred files it reads.</li>
+      <li class="frag"><b>When it builds from one command.</b> The agent runs the build exactly the way you do. No clicking through an editor.</li>
+      <li class="frag"><b>When it tests from one command.</b> The tests sit beside the modules and map back to the scenarios in the plan.</li>
+      <li class="frag"><b>When the plan is in the repo.</b> AGENTS.md, the GDD, the art bible. The agent reads them at the start of every task.</li>
+      <li class="frag"><b>When the agent can see what it did.</b> A dev server, a screenshot tool, a render script, a log it can search.</li>
     </ul>
-    <div class="lead frag" style="position:absolute;bottom:0;left:0">A 4,000-line <span class="mono">game.js</span> fails every one of these. I know, because I've written it.</div>
+    <div class="caption frag" style="position:absolute;bottom:0;left:0;width:1728px">One more thing. AI is not the best tool for walking a tree, parsing a file, or rote replacement such as linting and renaming. It can do those things. Should it? Use the linter, and save the model for the parts that need judgement.</div>
   </div>
   <div class="footer"><span>08 · Good architecture</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
@@ -607,20 +607,20 @@ Scenario: a check-in after a walk
 
 <!-- 32 art pipeline -->
 <section class="slide" id="artpipe">
-  <div class="titleblock"><div class="kicker">Where the assets come from</div><h1 class="title">The AI art pipeline, honestly</h1></div>
+  <div class="titleblock"><div class="kicker">Where the assets come from</div><h1 class="title">The AI art pipeline</h1></div>
   <div class="content">
     <svg viewBox="0 0 1728 660" width="1728" height="660">
-      <rect class="node" x="0" y="40" width="380" height="140"/><text x="32" y="98">Art bible</text><text class="sm" x="32" y="140">The Art agent, then a human</text>
+      <rect class="node" x="0" y="40" width="380" height="140"/><text x="32" y="98">Art bible</text><text class="sm" x="32" y="140">Human, ideally. Agent otherwise.</text>
       <line class="st si" x1="380" y1="110" x2="470" y2="110"/>
       <rect class="node" x="474" y="0" width="380" height="120"/><text x="506" y="50">2D: image model</text><text class="sm" x="506" y="92">Flux, Imagen, GPT Image</text>
-      <rect class="node" x="474" y="140" width="380" height="120"/><text x="506" y="190">3D: SDF or generator</text><text class="sm" x="506" y="232">sdf-modelling · Meshy · Tripo · Customuse</text>
+      <rect class="node" x="474" y="140" width="380" height="120"/><text x="506" y="190">3D: signed-distance field, or generator</text><text class="sm" x="506" y="232">sdf-modelling · Meshy · Tripo · Customuse</text>
       <line class="st de" x1="854" y1="60" x2="944" y2="60"/><line class="st de" x1="854" y1="200" x2="944" y2="200"/>
       <rect class="node" x="948" y="0" width="380" height="120"/><text x="980" y="50">Sprite sheet</text><text class="sm" x="980" y="92">Atlas, palette lint</text>
       <rect class="node" x="948" y="140" width="380" height="120"/><text x="980" y="190">Blender</text><text class="sm" x="980" y="232">Retopo, rig, clean up, glTF</text>
       <line class="st de" x1="1328" y1="60" x2="1418" y2="110"/><line class="st de" x1="1328" y1="200" x2="1418" y2="150"/>
       <rect class="node" x="1422" y="70" width="306" height="120"/><text x="1454" y="120">Engine</text><text class="sm" x="1454" y="162">glTF in, done</text>
       <g class="frag">
-        <text x="0" y="360" style="font-size:40px;font-weight:500">Let's be honest: this is still the weak point of the whole process.</text>
+        <text x="0" y="360" style="font-size:40px;font-weight:500">This is still the weak point of the whole process.</text>
         <text x="0" y="440"><tspan fill="#C8DF00" font-weight="600">Humans</tspan> for decisions, direction, taste and concepts.</text>
         <text x="0" y="500">AI tooling for the repetitive and the many: variants, sheets, filler, retakes.</text>
         <text class="sm" x="0" y="580">The art bible and a human eye are what keep it from looking like AI slop. Nothing else does.</text>
@@ -735,14 +735,14 @@ Fixes the charge loop level for the replaced charge.wav</pre>
         <li class="frag"><b>An API</b> the agent scaffolds: REST or WebSocket, same session as the client.</li>
         <li class="frag"><b>CI</b> that builds every push. Snail's Pace publishes an Android build on every merge.</li>
         <li class="frag"><b>A kill switch.</b> Because live ops.</li>
-        <li class="frag"><b>A plan for success.</b> Scale is a good problem to have, and the agent can read the bill.</li>
+        <li class="frag"><b>A plan for success.</b> Scale is a good problem to have.</li>
       </ul>
       <div class="well">
         <div class="body">Snail's Pace has no server of its own. The race syncs between two phones over Nostr relays, and the invite is a link the studio site serves. A protocol did the back end. That's not a trick — that's the point of a protocol.</div>
         <div class="qrs three" style="justify-content:start;gap:48px;margin-top:40px;grid-template-columns:repeat(3,200px)">
           <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/flyio.svg" alt=""></div><figcaption class="caption">fly.io</figcaption></figure>
           <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/websavers.svg" alt=""></div><figcaption class="caption">websavers.ca<br>Halifax, since 2004</figcaption></figure>
-          <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/nostr.svg" alt=""></div><figcaption class="caption">nostr.com</figcaption></figure>
+          <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/nostr-book.svg" alt=""></div><figcaption class="caption">nostr-book.org</figcaption></figure>
         </div>
       </div>
     </div>
@@ -793,14 +793,14 @@ Fixes the charge loop level for the replaced charge.wav</pre>
 
 <!-- 42 context window -->
 <section class="slide" id="window">
-  <div class="titleblock"><div class="kicker">The counterweight to "more context"</div><h1 class="title">Keep one eye on the window</h1></div>
+  <div class="titleblock"><div class="kicker">The counterweight to "more context is better"</div><h1 class="title">Keep your eye on the context window</h1></div>
   <div class="content">
     <ul class="tips">
-      <li class="frag"><b>It fills</b> faster than you think. Every file read, every tool result, every screenshot is in there.</li>
-      <li class="frag"><b>Watch</b> the status line. The harness tells you how much is left. Nobody reads it until it's gone.</li>
-      <li class="frag"><b>Compaction</b> is lossy. When the harness summarizes to make room, the detail you cared about is exactly what goes.</li>
-      <li class="frag"><b>Hand off</b> instead of pushing on. Write the state to a file, start a fresh session, point it at the file.</li>
-      <li class="frag"><b>Scrollback</b> is not context. The plan in the repo is context. The argument you had an hour ago is not.</li>
+      <li class="frag"><b>It fills up faster than you expect.</b> Every file the agent reads, every tool result, every screenshot goes into the window and stays there.</li>
+      <li class="frag"><b>Watch the status line.</b> The harness shows you how much of the window is left. Most people don't look at it until it has run out.</li>
+      <li class="frag"><b>Compaction loses things.</b> When the harness summarizes the conversation to make room, the specific detail you cared about is usually what gets dropped.</li>
+      <li class="frag"><b>Hand off instead of pushing on.</b> Write the current state to a file, start a fresh session, and point the new session at that file.</li>
+      <li class="frag"><b>Scrollback is not context.</b> The plan in the repo is context. The argument you had with the agent an hour ago is not, and it will not survive.</li>
     </ul>
   </div>
   <div class="footer"><span>12 · Prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
@@ -859,21 +859,6 @@ Fixes the charge loop level for the replaced charge.wav</pre>
         <div class="caption" style="width:400px;margin-top:32px">Keyboard: W/S thrust, arrows aim, Space/Ctrl trim. A controller works too.</div>
       </div>
     </div>
-  </div>
-  <div class="footer"><span>14 · Start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
-</section>
-
-<!-- 49 start tonight -->
-<section class="slide" id="tonight">
-  <div class="titleblock"><div class="kicker">Five steps, one evening</div><h1 class="title">What to do when you get home</h1></div>
-  <div class="content">
-    <ul class="tips">
-      <li class="frag"><b>Install</b> one terminal harness. Claude Code, Codex, OpenCode or Pi. Just one.</li>
-      <li class="frag"><b>Clone</b> the skills from the QR wall on the next slide. Read two of them.</li>
-      <li class="frag"><b>Make</b> a folder. Init it. Everything about the game lives in there from now on.</li>
-      <li class="frag"><b>Brainstorm</b> a one-page GDD, then let the agent grill you until it closes.</li>
-      <li class="frag"><b>Build</b> the smallest playable thing that runs in a browser. One mechanic. Then the ring turns.</li>
-    </ul>
   </div>
   <div class="footer"><span>14 · Start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
