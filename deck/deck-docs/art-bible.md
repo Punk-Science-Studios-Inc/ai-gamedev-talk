@@ -88,7 +88,7 @@ direction_contract:
       display: { name: "Archivo Black", google: "Archivo+Black", weight: 400, fallback: "'Archivo Black', 'Arial Black', 'Helvetica Neue', Impact, sans-serif" }
       text:    { name: "Archivo", google: "Archivo:wght@400;500;600", weights: [400, 500, 600], fallback: "Archivo, 'Helvetica Neue', Arial, system-ui, sans-serif" }
       mono:    { name: "JetBrains Mono", google: "JetBrains+Mono:wght@400;700", weights: [400, 700], fallback: "'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" }
-    case: "all headings, titles and labels lowercase. sentence case in body. no ALL-CAPS anywhere."
+    case: "Title Case for section and slide titles; sentence case for body, kickers and captions. No ALL-CAPS anywhere. (Overruled by the author on 2026-09-20: the original contract asked for all-lowercase; he does not write that way.)"
     roles:
       section_title:  { family: display, weight: 400, size_px: 140, line_height: 1.00, tracking_em: -0.030, colour: text_primary }
       statement:      { family: display, weight: 400, size_px: 96,  line_height: 1.08, tracking_em: -0.025, colour: text_primary, measure_max_ch: 34 }

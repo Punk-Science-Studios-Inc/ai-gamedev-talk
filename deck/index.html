@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ai + gamedev</title>
+<title>AI + Gamedev</title>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="deck.css">
 </head>
@@ -18,64 +18,64 @@
     <img class="bossa" src="assets/img/bossa-logo-orange.png" alt="Bossa Games">
   </div>
   <div class="talk">
-    <div class="section-title">ai + gamedev</div>
-    <div class="lead dim" style="margin-top:32px">game development with ai tools. how to start, and how not to.</div>
+    <div class="section-title">AI + Gamedev</div>
+    <div class="lead dim" style="margin-top:32px">Making games with AI tools. How to start, and how not to.</div>
   </div>
-  <div class="who caption">darryl wright · punk science studios inc · bossa games · halifax, nova scotia · 2026</div>
+  <div class="who caption">Darryl Wright · Punk Science Studios Inc · Bossa Games · Halifax, Nova Scotia · 2026</div>
 </section>
 
 <!-- 2 skip -->
 <section class="slide" id="skip">
-  <div class="titleblock"><div class="kicker">before we start</div><h1 class="title">what i'll skip over</h1></div>
+  <div class="titleblock"><div class="kicker">Before we start</div><h1 class="title">What I'm going to skip</h1></div>
   <div class="content">
     <ul class="tips">
-      <li class="frag"><b>what an llm is</b> and how they work. you have heard it.</li>
-      <li class="frag"><b>chatbots</b> and the prompt-and-response loop. this talk is about the other loop.</li>
-      <li class="frag"><b>third-party publishing.</b> a different talk, a different decade.</li>
+      <li class="frag"><b>What an LLM is</b> and how it works. You've heard it. You've probably heard it twice.</li>
+      <li class="frag"><b>Chatbots</b> and the prompt-and-response loop. This talk is about the other loop.</li>
+      <li class="frag"><b>Third-party publishing.</b> That's a different talk, and frankly a different decade.</li>
     </ul>
   </div>
-  <div class="footer"><span>ai + gamedev · punk.science</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>AI + Gamedev · punk.science</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 3 cover -->
 <section class="slide" id="cover">
-  <div class="titleblock"><div class="kicker">forty-five minutes, then fifteen of questions</div><h1 class="title">what we're going to cover</h1></div>
+  <div class="titleblock"><div class="kicker">Forty-five minutes, then fifteen of questions</div><h1 class="title">What we're going to cover</h1></div>
   <div class="content">
     <div class="cols">
       <ul class="tips dense">
-        <li>the (evolving) game development cycle</li>
-        <li>defining terms</li>
-        <li>what's a harness, and how important is it</li>
-        <li>the model landscape</li>
-        <li>agents and skills</li>
-        <li>workflow and choosing a harness</li>
-        <li>good planning</li>
+        <li>The (evolving) game development cycle</li>
+        <li>Defining terms</li>
+        <li>What's a harness, and how much does it matter</li>
+        <li>The model landscape</li>
+        <li>Agents and skills</li>
+        <li>Workflow, and choosing a harness</li>
+        <li>Good planning</li>
       </ul>
       <ul class="tips dense">
-        <li>good architecture</li>
-        <li>platform, engine and art</li>
-        <li>the state of the art</li>
-        <li>the back end</li>
-        <li>prompt and context tips</li>
-        <li>sovereignty, and why it's a thing now</li>
-        <li>questions</li>
+        <li>Good architecture</li>
+        <li>Platform, engine and art</li>
+        <li>The state of the art</li>
+        <li>The back end</li>
+        <li>Prompt and context tips</li>
+        <li>Sovereignty, and why it's a thing now</li>
+        <li>Questions</li>
       </ul>
     </div>
-    <div class="lead" style="position:absolute;bottom:0;left:0"><span class="signal">ai does not one-shot a game.</span> it accelerates a discipline.</div>
+    <div class="lead" style="position:absolute;bottom:0;left:0"><span class="signal">AI does not one-shot a game.</span> It accelerates a discipline. That's the whole talk — the rest is evidence.</div>
   </div>
-  <div class="footer"><span>ai + gamedev · punk.science</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>AI + Gamedev · punk.science</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 4 divider: cycle -->
 <section class="slide divider" id="s-cycle">
   <div class="num caption">01</div>
-  <div class="section-title">the (evolving)<br>game development cycle</div>
+  <div class="section-title">The (Evolving)<br>Game Development Cycle</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 5 ring -->
 <section class="slide" id="ring">
-  <div class="titleblock"><div class="kicker">same stages. faster. alone if you have to.</div><h1 class="title">the same ring, on fast-forward</h1></div>
+  <div class="titleblock"><div class="kicker">Same stages. Faster. Alone, if you have to.</div><h1 class="title">The same ring, on fast-forward</h1></div>
   <div class="content">
     <svg viewBox="0 0 1728 660" width="1728" height="660">
       <g transform="translate(480,330)" fill="none" stroke-width="28" stroke-linecap="butt">
@@ -89,90 +89,87 @@
         <path class="frag" stroke="#C8DF00" d="M -152.8 210.3 A 260 260 0 0 1 -254.3 54.1"/>
       </g>
       <g transform="translate(480,330)">
-        <text x="180" y="-250">ideation</text>
-        <text x="300" y="90">preproduction</text>
-        <text x="16" y="318" text-anchor="middle">production</text>
-        <text x="-300" y="120" text-anchor="end">deployment</text>
-        <text x="-250" y="-200" text-anchor="end">live ops</text>
-        <text class="sm" x="-30" y="-290" text-anchor="end">the ring never closes</text>
+        <text x="180" y="-250">Ideation</text>
+        <text x="300" y="90">Preproduction</text>
+        <text x="16" y="318" text-anchor="middle">Production</text>
+        <text x="-300" y="120" text-anchor="end">Deployment</text>
+        <text x="-250" y="-200" text-anchor="end">Live ops</text>
+        <text class="sm" x="-30" y="-290" text-anchor="end">The ring never closes</text>
       </g>
       <g transform="translate(1000,0)">
-        <text class="sm" y="40">ideation · planning · prototyping · design</text>
-        <text class="sm" y="80">vertical slice · alpha · beta · gold (rip) · soft launch</text>
-        <text class="sm" y="120">building and iteration · qa · art direction</text>
-        <text class="sm" y="160">source control · ci/cd · publishing · dlc · kill switches</text>
-        <text class="sm" y="200">live ops: patches, seasons, telemetry, the next version</text>
+        <text class="sm" y="40">Ideation · planning · prototyping · design</text>
+        <text class="sm" y="80">Vertical slice · alpha · beta · gold (RIP) · soft launch</text>
+        <text class="sm" y="120">Building and iteration · QA · art direction</text>
+        <text class="sm" y="160">Source control · CI/CD · publishing · DLC · kill switches</text>
+        <text class="sm" y="200">Live ops: patches, seasons, telemetry, the next version</text>
         <g class="frag">
           <rect x="0" y="270" width="28" height="28" fill="#C8DF00"/>
-          <text x="48" y="293">where ai compresses time</text>
-          <text class="sm" x="48" y="333">ideation · prototyping · boilerplate · ci scripting</text>
+          <text x="48" y="293">Where AI compresses time</text>
+          <text class="sm" x="48" y="333">Ideation · prototyping · boilerplate · CI scripting</text>
           <rect x="0" y="390" width="28" height="28" fill="#7A8800"/>
-          <text x="48" y="413">where it does not</text>
-          <text class="sm" x="48" y="453">design taste · qa judgement · art direction ·</text>
+          <text x="48" y="413">Where it does not</text>
+          <text class="sm" x="48" y="453">Design taste · QA judgement · art direction ·</text>
           <text class="sm" x="48" y="487">publishing relationships</text>
-          <text class="sm" x="0" y="570">every stage still happens. it happens in days,</text>
-          <text class="sm" x="0" y="604">and one developer can run the whole ring.</text>
+          <text class="sm" x="0" y="570">Every stage still happens. It happens in days now,</text>
+          <text class="sm" x="0" y="604">and one person can run the whole ring. I have.</text>
         </g>
       </g>
     </svg>
   </div>
-  <div class="footer"><span>01 · the game development cycle</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>01 · The game development cycle</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 6 divider: terms -->
 <section class="slide divider" id="s-terms">
   <div class="num caption">02</div>
-  <div class="section-title">defining terms</div>
+  <div class="section-title">Defining Terms</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 7 stack -->
 <section class="slide" id="stack">
-  <div class="titleblock"><div class="kicker">a vocabulary contract, because these words mean different things down the hall</div><h1 class="title">when i say these words, i mean this</h1></div>
+  <div class="titleblock"><div class="kicker">A vocabulary contract, because these words mean something different down the hall</div><h1 class="title">When I say these words, I mean this</h1></div>
   <div class="content">
     <svg viewBox="0 0 1728 660" width="1728" height="660">
       <g>
-        <rect class="node" x="0" y="0" width="1100" height="88"/><text x="32" y="54">front end</text><text class="sm" x="1068" y="54" text-anchor="end">ui, ux, hud. anything flat or 3d floating above the world, in the player's own context</text>
-        <rect class="node" x="0" y="104" width="1100" height="88"/><text x="32" y="158">game</text><text class="sm" x="1068" y="158" text-anchor="end">the world under the hud: play, mechanics, systems</text>
-        <rect class="node" x="0" y="208" width="1100" height="88"/><text x="32" y="262">sdk</text><text class="sm" x="1068" y="262" text-anchor="end">software development kit. an embedded third-party library that gives you a service out of the box</text>
-        <line class="bd" x1="0" y1="330" x2="1100" y2="330"/><text class="sm" x="1100" y="322" text-anchor="end">client boundary · the client is everything above this line, running on the player's device</text>
-        <rect class="node" x="0" y="360" width="1100" height="88"/><text x="32" y="414">api</text><text class="sm" x="1068" y="414" text-anchor="end">application programming interface. rest endpoints the client calls; sometimes what an sdk exposes</text>
-        <rect class="node" x="0" y="464" width="1100" height="88"/><text x="32" y="518">server</text><text class="sm" x="1068" y="518" text-anchor="end">on a device, on a platform, or in the cloud. invisible either way</text>
-        <rect class="node" x="0" y="568" width="1100" height="88"/><text x="32" y="622">back end</text><text class="sm" x="1068" y="622" text-anchor="end">the server, the infrastructure, and everything attached to it</text>
+        <rect class="node" x="0" y="0" width="1100" height="88"/><text x="32" y="54">Front end</text><text class="sm" x="1068" y="54" text-anchor="end">UI, UX, HUD. Anything flat or 3D that floats above the world, in the player's own context</text>
+        <rect class="node" x="0" y="104" width="1100" height="88"/><text x="32" y="158">Game</text><text class="sm" x="1068" y="158" text-anchor="end">The world under the HUD: play, mechanics, systems</text>
+        <rect class="node" x="0" y="208" width="1100" height="88"/><text x="32" y="262">SDK</text><text class="sm" x="1068" y="262" text-anchor="end">Software development kit. An embedded third-party library that gives you a service out of the box</text>
+        <line class="bd" x1="0" y1="330" x2="1100" y2="330"/><text class="sm" x="1100" y="322" text-anchor="end">Client boundary · the client is everything above this line, running on the player's device</text>
+        <rect class="node" x="0" y="360" width="1100" height="88"/><text x="32" y="414">API</text><text class="sm" x="1068" y="414" text-anchor="end">Application programming interface. REST endpoints the client calls; sometimes what an SDK exposes</text>
+        <rect class="node" x="0" y="464" width="1100" height="88"/><text x="32" y="518">Server</text><text class="sm" x="1068" y="518" text-anchor="end">On a device, on a platform, or in the cloud. Invisible either way</text>
+        <rect class="node" x="0" y="568" width="1100" height="88"/><text x="32" y="622">Back end</text><text class="sm" x="1068" y="622" text-anchor="end">The server, the infrastructure, and everything attached to it</text>
       </g>
       <g transform="translate(1180,0)">
-        <text y="54">client</text><text class="sm" y="94">the game as a whole,</text><text class="sm" y="128">running on the player's</text><text class="sm" y="162">platform or device.</text>
-        <text y="260">dashed line = boundary</text><text class="sm" y="300">solid box = a thing.</text><text class="sm" y="334">same rule on every</text><text class="sm" y="368">diagram in this deck.</text>
+        <text y="54">Client</text><text class="sm" y="94">The game as a whole,</text><text class="sm" y="128">running on the player's</text><text class="sm" y="162">platform or device.</text>
+        <text y="260">Dashed line = boundary</text><text class="sm" y="300">Solid box = a thing.</text><text class="sm" y="334">Same rule on every</text><text class="sm" y="368">diagram in this deck.</text>
       </g>
     </svg>
   </div>
-  <div class="footer"><span>02 · defining terms</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>02 · Defining terms</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 8 divider: harness -->
 <section class="slide divider" id="s-harness">
   <div class="num caption">03</div>
-  <div class="section-title">what's a harness,<br>and how important is it</div>
+  <div class="section-title">What's a Harness,<br>and How Much Does It Matter</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 9 illustration -->
 <section class="slide" id="horse">
-  <div class="titleblock"><div class="kicker">the model</div><h1 class="title">a brain full of facts</h1></div>
+  <div class="titleblock"><div class="kicker">The model</div><h1 class="title">A brain full of facts</h1></div>
   <div class="content">
-    <div class="statement" style="position:absolute;left:0;top:340px;font-size:72px">no legs,<br>no direction.</div>
-    <div class="caption" style="position:absolute;left:0;top:560px;width:700px">the harness is the tool for intention and focus: reach and restraint.</div>
+    <div class="statement" style="position:absolute;left:0;top:340px;font-size:72px">No legs,<br>no direction.</div>
+    <div class="caption" style="position:absolute;left:0;top:560px;width:700px">The harness is the tool for intention and focus. It gives the horse two things it doesn't have: reach, and restraint.</div>
     <svg viewBox="0 0 900 700" width="990" height="770" style="position:absolute;left:830px;top:-110px" aria-label="a rearing horse with no legs; a composed rider holds a single lime rein">
-      <!-- horse mass: one silhouette -->
       <path fill="#F0EDE4" d="M198 152 L236 96 L262 82 L272 112 L318 134 L372 208 L430 330 L470 430 L440 560 L720 560 L716 470 L700 380 L672 320 L610 290 L560 300 L520 262 L470 210 L400 160 L330 118 L292 104 L262 130 L230 150 Z"/>
-      <!-- anatomy notches, ground colour -->
       <path fill="#111111" d="M262 130 L300 150 L268 168 Z"/>
       <path fill="#111111" d="M360 222 L412 300 L372 296 Z"/>
       <path fill="#111111" d="M470 430 L500 500 L468 508 Z"/>
       <path fill="#111111" d="M560 560 L590 470 L610 560 Z"/>
       <path fill="#111111" d="M640 560 L664 490 L680 560 Z"/>
       <path fill="#111111" d="M236 96 L252 74 L256 96 Z"/>
-      <!-- rider: circle head, rectangular torso pitched back 38deg, straight arms -->
       <g transform="translate(560,250) rotate(38)">
         <rect x="-34" y="-140" width="68" height="150" fill="#F0EDE4"/>
         <circle cx="0" cy="-176" r="30" fill="#F0EDE4"/>
@@ -182,42 +179,41 @@
       <path fill="none" stroke="#F0EDE4" stroke-width="5" stroke-linecap="butt" d="M572 176 L398 246"/>
       <path fill="none" stroke="#F0EDE4" stroke-width="5" stroke-linecap="butt" d="M556 202 L392 256"/>
       <circle cx="392" cy="250" r="10" fill="#F0EDE4"/>
-      <!-- the harness: one lime path, hands to noseband -->
       <path fill="none" stroke="#C8DF00" stroke-width="5" stroke-linecap="butt" d="M390 250 Q300 190 215 145"/>
     </svg>
   </div>
-  <div class="footer"><span>03 · what's a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>03 · What's a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 10 reach / restraint -->
 <section class="slide" id="reach">
-  <div class="titleblock"><div class="kicker">a chat window is a harness with none of this</div><h1 class="title">the harness adds two things</h1></div>
+  <div class="titleblock"><div class="kicker">A chat window is a harness with none of this</div><h1 class="title">The harness adds two things</h1></div>
   <div class="content">
     <div class="cols hair">
       <div class="well">
-        <div class="lead"><span class="signal">reach.</span></div>
-        <div class="body">tools. a shell. the file system. the loop that lets the model act, look at what happened, and act again.<br><br>a bare model cannot open a file, run a build, or check its own work. it is not wild. it is inert.</div>
+        <div class="lead"><span class="signal">Reach.</span></div>
+        <div class="body">Tools. A shell. The file system. The loop that lets the model do something, look at what happened, and do the next thing.<br><br>Let's be clear about this — a bare model can't open a file, run a build, or check its own work. It isn't wild. It's inert.</div>
       </div>
       <div class="well">
-        <div class="lead"><span class="signal">restraint.</span></div>
-        <div class="body">permissions. context limits. hooks. skills and agents that say how work is done here.<br><br>the harness and what you put in it are yours. the model is rented.</div>
+        <div class="lead"><span class="signal">Restraint.</span></div>
+        <div class="body">Permissions. Context limits. Hooks. Skills and agents that say how work gets done around here.<br><br>The harness and everything you put in it are yours. The model is rented. Remember that one; it comes back later.</div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>03 · what's a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>03 · What's a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 11 chat vs harness -->
 <section class="slide" id="contrast">
-  <div class="titleblock"><div class="kicker">the same prompt, twice</div><h1 class="title">"make me a space taxi game"</h1></div>
+  <div class="titleblock"><div class="kicker">The same prompt, twice</div><h1 class="title">"Make me a space taxi game"</h1></div>
   <div class="content">
     <div class="cols">
       <div class="well">
-<pre class="term sm" style="font-size:20px;line-height:1.4"><span class="c">chat window</span>
+<pre class="term sm" style="font-size:20px;line-height:1.4"><span class="c">Chat window</span>
 
-<span class="c">you ›</span> make me a space taxi game in three.js
+<span class="c">You ›</span> Make me a space taxi game in three.js
 
-<span class="c">assistant ›</span> Sure! Here's a complete space taxi
+<span class="c">Assistant ›</span> Sure! Here's a complete space taxi
 game. Copy this into an HTML file:
 
 &lt;script type="module"&gt;
@@ -231,13 +227,13 @@ const cab = new THREE.Mesh(
 
 Let me know if you'd like any changes!
 
-<span class="d">no file. no run. no test. no memory of it tomorrow.</span></pre>
-        <div class="caption mcap">the model answered. nothing happened.</div>
+<span class="d">No file. No run. No test. No memory of it tomorrow.</span></pre>
+        <div class="caption mcap">The model answered. Nothing happened.</div>
       </div>
       <div class="well">
-<pre class="term sm" style="font-size:20px;line-height:1.4"><span class="c">terminal · claude code</span>
+<pre class="term sm" style="font-size:20px;line-height:1.4"><span class="c">Terminal · Claude Code</span>
 
-<span class="c">›</span> make me a space taxi game in three.js
+<span class="c">›</span> Make me a space taxi game in three.js
 
 <span class="c">read</span>  AGENTS.md · docs/GDD.md
 <span class="c">glob</span>  src/**/*.js  <span class="c">(14 files)</span>
@@ -247,100 +243,100 @@ Let me know if you'd like any changes!
        <span class="s">27 passed</span>, 0 failed
 <span class="c">bash</span>  npm run dev
 <span class="c">shot</span>  http://127.0.0.1:5173 → frame.png
-       the cab drifts up on entry.
-       trimming vertical thrust at the boundary…
+       The cab drifts up on entry.
+       Trimming vertical thrust at the boundary…
 <span class="c">bash</span>  npm test  <span class="s">28 passed</span>
 <span class="c">git</span>   commit -m "Space flight mode — refs #4"
 
-<span class="s">a file, a test, a screenshot, a commit.</span></pre>
-        <div class="caption mcap">the harness did the work. reconstructed from a real o'neill session.</div>
+<span class="s">A file, a test, a screenshot, a commit.</span></pre>
+        <div class="caption mcap">The harness did the work. Reconstructed from a real O'Neill session.</div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>03 · what's a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>03 · What's a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 12 divider: models -->
 <section class="slide divider" id="s-models">
   <div class="num caption">04</div>
-  <div class="section-title">the model landscape</div>
+  <div class="section-title">The Model Landscape</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 13 scale -->
 <section class="slide" id="scale">
-  <div class="titleblock"><div class="kicker">the names go stale in months. the shape does not.</div><h1 class="title">how many is a lot</h1></div>
+  <div class="titleblock"><div class="kicker">The names go stale in months. The shape of the thing does not.</div><h1 class="title">How many is a lot?</h1></div>
   <div class="content">
     <table class="t">
-      <thead><tr><th>where</th><th>count</th><th>rate</th><th>pulled</th></tr></thead>
+      <thead><tr><th>Where</th><th>Count</th><th>Rate</th><th>Pulled</th></tr></thead>
       <tbody>
-        <tr><td class="h">openrouter, models listed</td><td>446</td><td>39 added in the last four weeks. about ten a week.</td><td class="dim">2026-09-20</td></tr>
-        <tr><td class="h">hugging face, public models</td><td>3,080,517</td><td>about 3,000 a day. three million was passed on 18 aug 2026.</td><td class="dim">2026-09-20</td></tr>
-        <tr><td class="h">openrouter, tokens routed</td><td>20 trillion a week</td><td>april 2026 figure, secondary source</td><td class="dim">2026-09-20</td></tr>
+        <tr><td class="h">OpenRouter, models listed</td><td>446</td><td>39 added in the last four weeks. About 10 a week.</td><td class="dim">2026-09-20</td></tr>
+        <tr><td class="h">Hugging Face, public models</td><td>3,080,517</td><td>About 3,000 a day. They passed three million on August 18, 2026.</td><td class="dim">2026-09-20</td></tr>
+        <tr><td class="h">OpenRouter, tokens routed</td><td>20 trillion a week</td><td>April 2026 figure, secondary source</td><td class="dim">2026-09-20</td></tr>
       </tbody>
     </table>
-    <div class="caption" style="margin-top:32px">sources: openrouter.ai/api/v1/models (counted), huggingface.co/models, the hugging face "three million models" post. nobody can evaluate this many. you need a way to choose, not a list.</div>
-    <div class="lead frag" style="position:absolute;bottom:0;left:0">so the useful question is not "which model" but <span class="signal">"which kind, and where does it run."</span></div>
+    <div class="caption" style="margin-top:32px">Sources: openrouter.ai/api/v1/models (counted), huggingface.co/models, the Hugging Face "three million models" post. Nobody can evaluate this many. Nobody is going to try.</div>
+    <div class="lead frag" style="position:absolute;bottom:0;left:0">So the useful question isn't "which model." It's <span class="signal">"which kind, and where does it run?"</span></div>
   </div>
-  <div class="footer"><span>04 · the model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>04 · The model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 14 taxonomy -->
 <section class="slide" id="taxonomy">
-  <div class="titleblock"><div class="kicker">by kind, then by where it comes from</div><h1 class="title">the cells outlive the names</h1></div>
+  <div class="titleblock"><div class="kicker">By kind, then by where it comes from</div><h1 class="title">The cells outlive the names</h1></div>
   <div class="content">
     <div class="cells">
-      <div class="cell"><div class="lead">tool-calling</div><div class="caption">can drive a harness: reads, writes, runs, checks. the only kind that matters for an agent. most frontier and open-weights models now qualify.</div></div>
-      <div class="cell"><div class="lead">coding</div><div class="caption">tuned on code and repos. claude, gpt, gemini at the top; qwen coder, deepseek, north mini code as open weights.</div></div>
-      <div class="cell"><div class="lead">image and 3d</div><div class="caption">flux, imagen, gpt-image for 2d. meshy, tripo, rodin, hunyuan3d for meshes. a different pipeline, covered later.</div></div>
-      <div class="cell"><div class="lead">frontier, us</div><div class="caption">anthropic claude, openai gpt, google gemini, meta muse spark. closed weights, hosted, the strongest planners.</div></div>
-      <div class="cell"><div class="lead">open weights, china</div><div class="caption">qwen 3.8, deepseek v4, kimi k3, glm-5.3. run them anywhere, including your own box. read the licence.</div></div>
-      <div class="cell rec"><div class="lead">canadian</div><div class="caption">cohere command a+ and command a (toronto). north mini code: 30b, apache-2.0, runs locally. it exists, and it is closer to home.</div></div>
+      <div class="cell"><div class="lead">Tool-calling</div><div class="caption">Can drive a harness: read, write, run, check. The only kind that matters for an agent. Most frontier and open-weights models now qualify.</div></div>
+      <div class="cell"><div class="lead">Coding</div><div class="caption">Tuned on code and repos. Claude, GPT and Gemini at the top; Qwen Coder, DeepSeek and North Mini Code as open weights.</div></div>
+      <div class="cell"><div class="lead">Image and 3D</div><div class="caption">Flux, Imagen and GPT Image for 2D. Meshy, Tripo, Rodin and Hunyuan3D for meshes. A different pipeline, and a different conversation, later.</div></div>
+      <div class="cell"><div class="lead">Frontier, US</div><div class="caption">Anthropic's Claude, OpenAI's GPT, Google's Gemini, Meta's Muse Spark. Closed weights, hosted, the strongest planners.</div></div>
+      <div class="cell"><div class="lead">Open weights, China</div><div class="caption">Qwen 3.8, DeepSeek V4, Kimi K3, GLM-5.3. Run them anywhere, including your own box. Read the licence.</div></div>
+      <div class="cell rec"><div class="lead">Canadian</div><div class="caption">Cohere's Command A+ and Command A, out of Toronto. North Mini Code: 30B, Apache-2.0, runs locally. It exists, and it's a lot closer to home.</div></div>
     </div>
-    <div class="caption" style="margin-top:24px">model names as of 2026-09-20. the six cells will still be here next year.</div>
+    <div class="caption" style="margin-top:24px">Model names as of 2026-09-20. The six cells will still be here next year. Some of the names won't.</div>
   </div>
-  <div class="footer"><span>04 · the model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>04 · The model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 15 openrouter -->
 <section class="slide" id="openrouter">
-  <div class="titleblock"><div class="kicker">one endpoint, every model</div><h1 class="title">openrouter, and the "auto" model</h1></div>
+  <div class="titleblock"><div class="kicker">One endpoint, every model</div><h1 class="title">OpenRouter, and the "auto" model</h1></div>
   <div class="content">
     <div class="cols">
       <div class="well">
-        <div class="lead">the on-ramp.</div>
-        <div class="body">one api key instead of accounts at five labs. every model on the taxonomy slide behind one url.<br><br><span class="mono">openrouter/auto</span> picks the model for each prompt, "powered by the wisdom of the market": what the crowd is spending on this week, by task type.<br><br>the fastest way to experiment. use it tonight.</div>
+        <div class="lead">The on-ramp.</div>
+        <div class="body">One API key instead of accounts at five labs. Every model on the last slide, behind one URL.<br><br><span class="mono">openrouter/auto</span> picks the model for each prompt, "powered by the wisdom of the market" — which is to say, whatever the crowd is spending on this week, by task type.<br><br>It's the fastest way to experiment. Use it tonight.</div>
       </div>
       <div class="well">
-        <div class="lead frag">the catch.</div>
-        <div class="body frag">you no longer know which model touched your code.<br><br>that matters for <span class="signal">cost</span> (a hard problem routed to a frontier model bills like one), for <span class="signal">consistency</span> (agents and skills are tuned to a model's habits), and for <span class="signal">sovereignty</span> (where did your repo just go).<br><br>experiment on auto. build on a pinned model.</div>
+        <div class="lead frag">The catch.</div>
+        <div class="body frag">You no longer know which model touched your code.<br><br>That matters for <span class="signal">cost</span> (a hard problem routed to a frontier model bills like one), for <span class="signal">consistency</span> (your agents and skills are tuned to a model's habits), and for <span class="signal">sovereignty</span> (where did your repo just go?).<br><br>Experiment on auto. Build on a pinned model.</div>
         <figure class="frag" style="margin:32px 0 0"><div class="qr"><img src="assets/qr/openrouter.svg" alt=""></div><figcaption class="caption" style="width:240px;text-align:center;margin-top:16px">openrouter.ai</figcaption></figure>
       </div>
     </div>
   </div>
-  <div class="footer"><span>04 · the model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>04 · The model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 16 statement -->
 <section class="slide stmt" id="rule">
-  <div class="statement">frontier to plan.<br>cheap to grind.<br>local when it's <span class="signal">yours</span>.</div>
-  <div class="footer"><span>04 · the model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="statement">Frontier to plan.<br>Cheap to grind.<br>Local when it's <span class="signal">yours</span>.</div>
+  <div class="footer"><span>04 · The model landscape</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 17 divider: agents and skills -->
 <section class="slide divider" id="s-agents">
   <div class="num caption">05</div>
-  <div class="section-title">agents and skills</div>
+  <div class="section-title">Agents and Skills</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 18 skill vs agent -->
 <section class="slide" id="skillagent">
-  <div class="titleblock"><div class="kicker">the leverage is in what you write down, not in the prompt you type</div><h1 class="title">a recipe and a specialist</h1></div>
+  <div class="titleblock"><div class="kicker">The leverage is in what you write down, not in what you type</div><h1 class="title">A recipe and a specialist</h1></div>
   <div class="content">
     <div class="cols">
       <div class="well">
-        <div class="lead"><span class="signal">skill.</span> a reusable instruction set the harness loads when a task matches.</div>
+        <div class="lead"><span class="signal">Skill.</span> A reusable set of instructions the harness loads when a task matches.</div>
 <pre class="term sm"><span class="c">skills/ps-project-init/SKILL.md</span>
 ---
 name: ps-project-init
@@ -355,7 +351,7 @@ description: Initialize a project workspace.
 2. Draft AGENTS.md with the sections …</pre>
       </div>
       <div class="well">
-        <div class="lead"><span class="signal">agent.</span> a persona with its own rules, tools and context that you hand a job to.</div>
+        <div class="lead"><span class="signal">Agent.</span> A persona with its own rules, tools and context that you hand a job to.</div>
 <pre class="term sm"><span class="c">agents/art.md</span>
 ---
 name: art
@@ -371,134 +367,134 @@ You are **Art**, a senior Art Director…
   → systems → art bible → enforcement.</pre>
       </div>
     </div>
-    <div class="caption" style="position:absolute;bottom:0;left:0">both are markdown with a frontmatter block. no code. that is the whole trick.</div>
+    <div class="caption" style="position:absolute;bottom:0;left:0">Both are Markdown with a frontmatter block. No code. That's the whole trick, and it has to be said: it's a good one.</div>
   </div>
-  <div class="footer"><span>05 · agents and skills</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>05 · Agents and skills</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 19 art built this -->
 <section class="slide" id="artbuilt">
-  <div class="titleblock"><div class="kicker">this deck was designed by the art agent, this morning</div><h1 class="title">what an agent hands back</h1></div>
+  <div class="titleblock"><div class="kicker">This deck was designed by the Art agent. This morning.</div><h1 class="title">What an agent hands back</h1></div>
   <div class="content">
-<pre class="term sm" style="width:1180px;font-size:20px;line-height:1.4"><span class="c">› art: produce the art bible for a conference slide deck. no user available: ask your five questions in the document, answer them yourself, proceed.</span>
+<pre class="term sm" style="width:1180px;font-size:20px;line-height:1.4"><span class="c">› art: Produce the art bible for a conference slide deck. No user available: ask your five questions in the document, answer them yourself, proceed.</span>
 
-<span class="c">art ›</span> art bible written to docs/art-bible.md.
+<span class="c">Art ›</span> Art Bible written to docs/art-bible.md.
 
-<span class="s">the direction in one line.</span> near-black clinical slide system, cream type, one acid lime,
+<span class="s">The direction in one line.</span> Near-black clinical slide system, cream type, one acid lime,
 and lime only ever marks where a human is still required.
 
-<span class="c">decisions worth flagging to you.</span>
-· two brand greens demoted on contrast grounds: dark olive measures 2.11:1 on black, invisible on a weak projector.
-· univers light condensed rejected: light condensed dies at distance. archivo instead.
-· the horse has no legs. the torso just stops. nobody in the picture acknowledges it.
-· the live-ops segment ends in a 24° gap. the ring never closes. do not tidy.
+<span class="c">Decisions worth flagging to you.</span>
+· Two brand greens demoted on contrast grounds: dark olive measures 2.11:1 on black, invisible on a weak projector.
+· Univers Light Condensed rejected: light condensed dies at distance. Archivo instead.
+· The horse has no legs. The torso just stops. Nobody in the picture acknowledges it.
+· The live-ops segment ends in a 24° gap. The ring never closes. Do not tidy.
 
 <span class="c">direction_contract:</span>
   palette:  { ground: "#111111", text_primary: "#F0EDE4", signal: "#C8DF00", border: "#7A8800" }
   contrast: { body_min: 7.0, projector: "assume washed out; ratios are best case" }
   motion:   { allowed: 2, slide_advance: 120ms, build_reveal: 180ms }</pre>
-    <div class="caption mcap">a yaml block other agents parse without reading the prose. the build agent that wrote this html read the contract, not the essay.</div>
+    <div class="caption mcap">A YAML block other agents parse without reading the prose. The build agent that wrote this HTML read the contract, not the essay. I overruled exactly one thing: it wanted the whole deck in lowercase.</div>
   </div>
-  <div class="footer"><span>05 · agents and skills</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>05 · Agents and skills</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 20 where to get them -->
 <section class="slide" id="getskills">
-  <div class="titleblock"><div class="kicker">start with other people's, then write your own</div><h1 class="title">where to get them</h1></div>
+  <div class="titleblock"><div class="kicker">Start with other people's. Then write your own.</div><h1 class="title">Where to get them</h1></div>
   <div class="content">
     <div class="qrs five" style="margin-top:40px">
-      <figure><div class="qr"><img src="assets/qr/talk-repo.svg" alt=""></div><figcaption class="caption">this talk, and my<br>cleared skills and agents</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/mattpocock-skills.svg" alt=""></div><figcaption class="caption">matt pocock's skills<br>grill-me, tdd, handoff</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/unity-ai-workflow.svg" alt=""></div><figcaption class="caption">devdavv / unity-ai-workflow<br>brainstorm, uw-* family</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/talk-repo.svg" alt=""></div><figcaption class="caption">This talk, and my<br>cleared skills and agents</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/mattpocock-skills.svg" alt=""></div><figcaption class="caption">Matt Pocock's skills<br>grill-me, tdd, handoff</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/unity-ai-workflow.svg" alt=""></div><figcaption class="caption">devdavv / unity-ai-workflow<br>brainstorm, the uw-* family</figcaption></figure>
       <figure><div class="qr"><img src="assets/qr/claude-code-game-studios.svg" alt=""></div><figcaption class="caption">donchitos /<br>claude-code-game-studios</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/anthropic-skills.svg" alt=""></div><figcaption class="caption">anthropics / skills<br>the official set</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/anthropic-skills.svg" alt=""></div><figcaption class="caption">anthropics / skills<br>The official set</figcaption></figure>
     </div>
   </div>
-  <div class="footer"><span>05 · agents and skills</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>05 · Agents and skills</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 21 divider: workflow -->
 <section class="slide divider" id="s-workflow">
   <div class="num caption">06</div>
-  <div class="section-title">workflow and<br>choosing a harness</div>
+  <div class="section-title">Workflow, and<br>Choosing a Harness</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 22 harness table -->
 <section class="slide" id="harnesses">
-  <div class="titleblock"><div class="kicker">experiment. find the one that suits you. don't take my word for it.</div><h1 class="title">six harnesses, one multiplexer</h1></div>
+  <div class="titleblock"><div class="kicker">Experiment. Find the one that suits you. Don't take my word for it.</div><h1 class="title">Six harnesses, one multiplexer</h1></div>
   <div class="content">
     <table class="t compact">
-      <thead><tr><th>harness</th><th>where it lives</th><th>models</th><th>skills · agents</th><th>cost</th><th>local models</th></tr></thead>
+      <thead><tr><th>Harness</th><th>Where it lives</th><th>Models</th><th>Skills · agents</th><th>Cost</th><th>Local models</th></tr></thead>
       <tbody>
-        <tr><td class="h rec">claude code</td><td>terminal, ide, desktop, web</td><td>anthropic only</td><td>skills, subagents, hooks, mcp</td><td>$20 to $200 a month, or api</td><td>no</td></tr>
-        <tr><td class="h">codex cli</td><td>terminal, ide</td><td>openai</td><td>skills, mcp, plugins</td><td>chatgpt plan or api</td><td>via ollama</td></tr>
-        <tr><td class="h">opencode</td><td>terminal</td><td>75+ providers, openrouter</td><td>agents, skills, mcp</td><td>free, open source</td><td>yes: ollama, lm studio</td></tr>
-        <tr><td class="h">muse code</td><td>terminal</td><td>meta muse spark only</td><td>subagents, worktrees</td><td>$5 to $50 a month</td><td>no</td></tr>
-        <tr><td class="h rec">pi</td><td>terminal</td><td>15+ providers, openrouter</td><td>extensions, skills</td><td>free, pay your tokens</td><td>yes: ollama</td></tr>
-        <tr><td class="h">buzz</td><td>desktop app</td><td>drives claude code, codex, goose</td><td>humans and agents as peers</td><td>free, self-hostable</td><td>whatever it drives</td></tr>
-        <tr><td class="h">herdr</td><td>terminal</td><td colspan="2">not a harness. a multiplexer: every agent pane at a glance, working, blocked or idle</td><td>free, apache-2.0</td><td>n/a</td></tr>
+        <tr><td class="h rec">Claude Code</td><td>Terminal, IDE, desktop, web</td><td>Anthropic only</td><td>Skills, subagents, hooks, MCP</td><td>$20 to $200 a month, or API</td><td>No</td></tr>
+        <tr><td class="h">Codex CLI</td><td>Terminal, IDE</td><td>OpenAI</td><td>Skills, MCP, plugins</td><td>ChatGPT plan or API</td><td>Via Ollama</td></tr>
+        <tr><td class="h">OpenCode</td><td>Terminal</td><td>75+ providers, OpenRouter</td><td>Agents, skills, MCP</td><td>Free, open source</td><td>Yes: Ollama, LM Studio</td></tr>
+        <tr><td class="h">Muse Code</td><td>Terminal</td><td>Meta's Muse Spark only</td><td>Subagents, worktrees</td><td>$5 to $50 a month</td><td>No</td></tr>
+        <tr><td class="h rec">Pi</td><td>Terminal</td><td>15+ providers, OpenRouter</td><td>Extensions, skills</td><td>Free, pay your own tokens</td><td>Yes: Ollama</td></tr>
+        <tr><td class="h">Buzz</td><td>Desktop app</td><td>Drives Claude Code, Codex, goose</td><td>Humans and agents as peers</td><td>Free, self-hostable</td><td>Whatever it drives</td></tr>
+        <tr><td class="h">herdr</td><td>Terminal</td><td colspan="2">Not a harness. A multiplexer: every agent pane at a glance, working, blocked or idle</td><td>Free, Apache-2.0</td><td>n/a</td></tr>
       </tbody>
     </table>
-    <div class="caption" style="margin-top:24px">pulled 2026-09-20. lime is my own split: claude code for reliability, pi with openrouter for the rest. costs mount fast on hard problems.</div>
+    <div class="caption" style="margin-top:24px">Pulled 2026-09-20. Lime is my own split: Claude Code when I want reliability and renewability, Pi with OpenRouter for the rest. Fair warning — costs mount fast on hard problems.</div>
   </div>
-  <div class="footer"><span>06 · workflow and choosing a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>06 · Workflow, and choosing a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 23 terminals -->
 <section class="slide" id="terminals">
-  <div class="titleblock"><div class="kicker">why i keep ending up back in a terminal</div><h1 class="title">close to the input, close to the output</h1></div>
+  <div class="titleblock"><div class="kicker">Why I keep ending up back in a terminal</div><h1 class="title">Close to the input, close to the output</h1></div>
   <div class="content">
     <div class="cols hair">
       <div class="well">
-        <div class="lead"><span class="signal">terminals</span> are fast.</div>
-        <div class="body">they hold you next to the prompt, the output, and the result of every tool call. cut and paste between five sessions in herdr. ssh into another box. git is right there.<br><br>the terminal costs a day of discomfort. that day is the price of everything after it.</div>
+        <div class="lead"><span class="signal">Terminals</span> are fast.</div>
+        <div class="body">They hold you right next to the prompt, the output, and the result of every tool call. Cut and paste between five sessions in herdr. SSH into another box. Git is right there.<br><br>Sure, the terminal costs you a day of discomfort. That day is the price of everything after it.</div>
       </div>
       <div class="well">
-        <div class="lead">desktops <span class="dim">hide and simplify.</span></div>
-        <div class="body">and end up more complicated. in claude desktop i do not know where i should do what, and when it works on a codebase i cannot tell where my changes actually land.<br><br>a chat window with a repo attached is still a chat window.</div>
+        <div class="lead">Desktops <span class="dim">hide and simplify.</span></div>
+        <div class="body">And somehow end up more complicated. In Claude Desktop I honestly don't know where I'm supposed to do what, and when it works on a codebase I can't tell you where my changes actually landed. Same with Buzz.<br><br>A chat window with a repo attached is still a chat window.</div>
       </div>
     </div>
-    <div class="caption" style="position:absolute;bottom:0;left:0">my daily loop: plan in the vault, grill the plan, init the folder, implement in small commits, review, repeat.</div>
+    <div class="caption" style="position:absolute;bottom:0;left:0">My daily loop: plan in the vault, grill the plan, init the folder, implement in small commits, review, repeat.</div>
   </div>
-  <div class="footer"><span>06 · workflow and choosing a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>06 · Workflow, and choosing a harness</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 24 divider: planning -->
 <section class="slide divider" id="s-planning">
   <div class="num caption">07</div>
-  <div class="section-title">good planning</div>
+  <div class="section-title">Good Planning</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 25 pipeline -->
 <section class="slide" id="pipeline">
-  <div class="titleblock"><div class="kicker">begin with a folder. keep everything in it.</div><h1 class="title">brainstorm, grill, init</h1></div>
+  <div class="titleblock"><div class="kicker">Begin with a folder. Keep everything in it.</div><h1 class="title">Brainstorm, grill, init</h1></div>
   <div class="content">
     <svg viewBox="0 0 1728 660" width="1728" height="660">
-      <rect class="node" x="0" y="80" width="520" height="220"/><text x="32" y="140">brainstorm</text>
-      <text class="sm" x="32" y="190">ps-brainstorm · unity-ai-workflow brainstorm</text><text class="sm" x="32" y="224">a one-page gdd: pillars, core loop,</text><text class="sm" x="32" y="258">gherkin scenarios, a feedback matrix</text>
+      <rect class="node" x="0" y="80" width="520" height="220"/><text x="32" y="140">Brainstorm</text>
+      <text class="sm" x="32" y="190">ps-brainstorm · unity-ai-workflow's brainstorm</text><text class="sm" x="32" y="224">A one-page GDD: pillars, core loop,</text><text class="sm" x="32" y="258">Gherkin scenarios, a feedback matrix</text>
       <line class="st de" x1="520" y1="190" x2="600" y2="190"/><path class="st de" d="M588 178 L600 190 L588 202"/>
-      <rect class="node" x="604" y="80" width="520" height="220"/><text x="636" y="140">grill</text>
-      <text class="sm" x="636" y="190">matt pocock's grill-me</text><text class="sm" x="636" y="224">the agent interviews you until every</text><text class="sm" x="636" y="258">open question in the plan is closed</text>
+      <rect class="node" x="604" y="80" width="520" height="220"/><text x="636" y="140">Grill</text>
+      <text class="sm" x="636" y="190">Matt Pocock's grill-me</text><text class="sm" x="636" y="224">The agent interviews you until every</text><text class="sm" x="636" y="258">open question in the plan is closed</text>
       <line class="st de" x1="1124" y1="190" x2="1204" y2="190"/><path class="st de" d="M1192 178 L1204 190 L1192 202"/>
-      <rect class="node" x="1208" y="80" width="520" height="220"/><text x="1240" y="140">init</text>
-      <text class="sm" x="1240" y="190">ps-project-init</text><text class="sm" x="1240" y="224">agents.md, claude.md, git, first commit.</text><text class="sm" x="1240" y="258">the agent context lives with the code</text>
+      <rect class="node" x="1208" y="80" width="520" height="220"/><text x="1240" y="140">Init</text>
+      <text class="sm" x="1240" y="190">ps-project-init</text><text class="sm" x="1240" y="224">AGENTS.md, CLAUDE.md, git, first commit.</text><text class="sm" x="1240" y="258">The agent's context lives with the code</text>
       <g class="frag">
         <line class="st si" x1="1468" y1="300" x2="1468" y2="400"/>
         <rect class="node" x="0" y="400" width="1728" height="200"/>
-        <text x="32" y="460">then, and only then, code.</text>
-        <text class="sm" x="32" y="510">the plan is a document the agent reads on every task, not a conversation that scrolled away last tuesday.</text>
-        <text class="sm" x="32" y="548">one folder, one repo: plan, context, code, tests, art bible. portable to any harness, any model, any machine.</text>
+        <text x="32" y="460">Then, and only then, code.</text>
+        <text class="sm" x="32" y="510">The plan is a document the agent reads on every task — not a conversation that scrolled away last Tuesday.</text>
+        <text class="sm" x="32" y="548">One folder, one repo: plan, context, code, tests, art bible. Portable to any harness, any model, any machine.</text>
       </g>
     </svg>
   </div>
-  <div class="footer"><span>07 · good planning</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>07 · Good planning</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 26 agents.md beside gdd -->
 <section class="slide" id="plandocs">
-  <div class="titleblock"><div class="kicker">snail's pace, a real project, this morning</div><h1 class="title">what a finished plan looks like</h1></div>
+  <div class="titleblock"><div class="kicker">Snail's Pace, a real project, as of this morning</div><h1 class="title">What a finished plan looks like</h1></div>
   <div class="content">
     <div class="cols">
       <div class="well">
@@ -528,7 +524,7 @@ the first click of a dev server.
 - No colour literals in src/ outside tokens.
 - The player has a snail and a friend. That is the
   whole mental model.</div>
-        <div class="caption mcap">agents.md · written by ps-project-init, commit 44c2500</div>
+        <div class="caption mcap">AGENTS.md · written by ps-project-init, commit 44c2500</div>
       </div>
       <div class="well">
         <div class="tile md" style="height:560px"><h>SNAILS_PACE_GDD.md</h>
@@ -556,367 +552,367 @@ Scenario: a check-in after a walk
 
 ## Feedback Matrix
 | event | camera | sound | card |</div>
-        <div class="caption mcap">gdd v0.9 · pillars, core loop, gherkin acceptance, feedback matrix</div>
+        <div class="caption mcap">GDD v0.9 · pillars, core loop, Gherkin acceptance, feedback matrix</div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>07 · good planning</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>07 · Good planning</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 27 divider: architecture -->
 <section class="slide divider" id="s-arch">
   <div class="num caption">08</div>
-  <div class="section-title">good architecture</div>
+  <div class="section-title">Good Architecture</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 28 statement -->
 <section class="slide stmt" id="iwrote">
-  <div class="statement">even if the ai wrote it,<br><span class="signal">i</span> wrote it.</div>
-  <div class="footer"><span>08 · good architecture</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="statement">Even if the AI wrote it,<br><span class="signal">I</span> wrote it.</div>
+  <div class="footer"><span>08 · Good architecture</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 29 the agent can -->
 <section class="slide" id="agentcan">
-  <div class="titleblock"><div class="kicker">architecture is for the two parties who still work in the code: the agent and the team</div><h1 class="title">is this codebase ready for an agent</h1></div>
+  <div class="titleblock"><div class="kicker">Architecture is for the two parties who still have to work in the code: the agent, and the team</div><h1 class="title">Is this codebase ready for an agent?</h1></div>
   <div class="content">
     <ul class="tips">
-      <li class="frag"><b>find</b> where a thing lives. one system per folder, named what it is.</li>
-      <li class="frag"><b>build</b> it itself. one command, no clicking, no "it works on my machine".</li>
-      <li class="frag"><b>test</b> it itself. tests beside the module, mapped to the gherkin in the plan.</li>
-      <li class="frag"><b>read</b> the plan. agents.md, the gdd, the art bible, all in the repo.</li>
-      <li class="frag"><b>see</b> the result. a dev server, a screenshot tool, a render script, a log it can grep.</li>
+      <li class="frag"><b>Find</b> where a thing lives. One system per folder, named for what it is.</li>
+      <li class="frag"><b>Build</b> it itself. One command. No clicking, no "works on my machine."</li>
+      <li class="frag"><b>Test</b> it itself. Tests beside the module, mapped to the Gherkin in the plan.</li>
+      <li class="frag"><b>Read</b> the plan. AGENTS.md, the GDD, the art bible, all in the repo.</li>
+      <li class="frag"><b>See</b> the result. A dev server, a screenshot tool, a render script, a log it can grep.</li>
     </ul>
-    <div class="lead frag" style="position:absolute;bottom:0;left:0">a 4,000-line <span class="mono">game.js</span> fails every one of these.</div>
+    <div class="lead frag" style="position:absolute;bottom:0;left:0">A 4,000-line <span class="mono">game.js</span> fails every one of these. I know, because I've written it.</div>
   </div>
-  <div class="footer"><span>08 · good architecture</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>08 · Good architecture</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 30 divider: platform -->
 <section class="slide divider" id="s-platform">
   <div class="num caption">09</div>
-  <div class="section-title">platform, engine and art</div>
+  <div class="section-title">Platform, Engine and Art</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 31 engine table -->
 <section class="slide" id="engines">
-  <div class="titleblock"><div class="kicker">what the agent can touch, and what it cannot</div><h1 class="title">engines, from the agent's side</h1></div>
+  <div class="titleblock"><div class="kicker">What the agent can touch, and what it can't</div><h1 class="title">Engines, from the agent's side</h1></div>
   <div class="content">
     <table class="t compact">
-      <thead><tr><th>engine</th><th>text and diffable</th><th>headless build and run</th><th>editor access</th><th>art in</th><th>ships to</th></tr></thead>
+      <thead><tr><th>Engine</th><th>Text and diffable</th><th>Headless build and run</th><th>Editor access</th><th>Art in</th><th>Ships to</th></tr></thead>
       <tbody>
-        <tr><td class="h rec">web: phaser, three.js</td><td>all of it</td><td>npm run build, playwright</td><td>none needed</td><td>gltf, sprite sheets, atlases</td><td>browser, android and ios via capacitor, steam via electron</td></tr>
-        <tr><td class="h">unity</td><td>c# yes; scenes and prefabs are yaml, fragile</td><td>batchmode builds, test runner</td><td>mcp for unity, gladekit</td><td>fbx, gltf, blender direct, sprite atlas</td><td>everything, with a licence</td></tr>
-        <tr><td class="h">godot</td><td>gdscript and .tscn are text</td><td>headless export</td><td>godot mcp, cli</td><td>gltf native, blender direct, sprites</td><td>desktop, mobile, web; console via partners</td></tr>
-        <tr><td class="h">unreal</td><td>c++ yes; blueprints and assets are binary</td><td>unreal automation tool</td><td>python api, thin mcp</td><td>fbx, gltf, usd</td><td>everything, at scale</td></tr>
+        <tr><td class="h rec">Web: Phaser, three.js</td><td>All of it</td><td>npm run build, Playwright</td><td>None needed</td><td>glTF, sprite sheets, atlases</td><td>Browser; Android and iOS via Capacitor; Steam via Electron</td></tr>
+        <tr><td class="h">Unity</td><td>C# yes; scenes and prefabs are YAML, and fragile</td><td>Batchmode builds, test runner</td><td>MCP for Unity, GladeKit</td><td>FBX, glTF, Blender direct, sprite atlas</td><td>Everything, with a licence</td></tr>
+        <tr><td class="h">Godot</td><td>GDScript and .tscn are text</td><td>Headless export</td><td>Godot MCP, CLI</td><td>glTF native, Blender direct, sprites</td><td>Desktop, mobile, web; console via partners</td></tr>
+        <tr><td class="h">Unreal</td><td>C++ yes; Blueprints and assets are binary</td><td>Unreal Automation Tool</td><td>Python API, thin MCP</td><td>FBX, glTF, USD</td><td>Everything, at scale</td></tr>
       </tbody>
     </table>
-    <div class="caption" style="margin-top:24px">lime is the fastest first game for a newcomer: everything is text and it runs in a browser tonight. unity is where the professionals in this room already live and it works well with mcp. blueprints and binary assets fight the agent.</div>
+    <div class="caption" style="margin-top:24px">Lime is the fastest first game for a newcomer: everything is text and it runs in a browser tonight. Unity is where the professionals in this room already live, and it works well with MCP. Blueprints and binary assets fight the agent every step of the way.</div>
   </div>
-  <div class="footer"><span>09 · platform, engine and art</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>09 · Platform, engine and art</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 32 art pipeline -->
 <section class="slide" id="artpipe">
-  <div class="titleblock"><div class="kicker">where the assets come from</div><h1 class="title">the ai art pipeline, honestly</h1></div>
+  <div class="titleblock"><div class="kicker">Where the assets come from</div><h1 class="title">The AI art pipeline, honestly</h1></div>
   <div class="content">
     <svg viewBox="0 0 1728 660" width="1728" height="660">
-      <rect class="node" x="0" y="40" width="380" height="140"/><text x="32" y="98">art bible</text><text class="sm" x="32" y="140">the art agent, then a human</text>
+      <rect class="node" x="0" y="40" width="380" height="140"/><text x="32" y="98">Art bible</text><text class="sm" x="32" y="140">The Art agent, then a human</text>
       <line class="st si" x1="380" y1="110" x2="470" y2="110"/>
-      <rect class="node" x="474" y="0" width="380" height="120"/><text x="506" y="50">2d: image model</text><text class="sm" x="506" y="92">flux, imagen, gpt-image</text>
-      <rect class="node" x="474" y="140" width="380" height="120"/><text x="506" y="190">3d: sdf or generator</text><text class="sm" x="506" y="232">sdf-modelling · meshy · tripo · customuse</text>
+      <rect class="node" x="474" y="0" width="380" height="120"/><text x="506" y="50">2D: image model</text><text class="sm" x="506" y="92">Flux, Imagen, GPT Image</text>
+      <rect class="node" x="474" y="140" width="380" height="120"/><text x="506" y="190">3D: SDF or generator</text><text class="sm" x="506" y="232">sdf-modelling · Meshy · Tripo · Customuse</text>
       <line class="st de" x1="854" y1="60" x2="944" y2="60"/><line class="st de" x1="854" y1="200" x2="944" y2="200"/>
-      <rect class="node" x="948" y="0" width="380" height="120"/><text x="980" y="50">sprite sheet</text><text class="sm" x="980" y="92">atlas, palette lint</text>
-      <rect class="node" x="948" y="140" width="380" height="120"/><text x="980" y="190">blender</text><text class="sm" x="980" y="232">retopo, rig, clean up, gltf</text>
+      <rect class="node" x="948" y="0" width="380" height="120"/><text x="980" y="50">Sprite sheet</text><text class="sm" x="980" y="92">Atlas, palette lint</text>
+      <rect class="node" x="948" y="140" width="380" height="120"/><text x="980" y="190">Blender</text><text class="sm" x="980" y="232">Retopo, rig, clean up, glTF</text>
       <line class="st de" x1="1328" y1="60" x2="1418" y2="110"/><line class="st de" x1="1328" y1="200" x2="1418" y2="150"/>
-      <rect class="node" x="1422" y="70" width="306" height="120"/><text x="1454" y="120">engine</text><text class="sm" x="1454" y="162">gltf in, done</text>
+      <rect class="node" x="1422" y="70" width="306" height="120"/><text x="1454" y="120">Engine</text><text class="sm" x="1454" y="162">glTF in, done</text>
       <g class="frag">
-        <text x="0" y="360" style="font-size:40px;font-weight:500">this is still the weak point of the whole process.</text>
-        <text x="0" y="440"><tspan fill="#C8DF00" font-weight="600">humans</tspan> for decisions, direction, taste, concepts.</text>
-        <text x="0" y="500">ai tooling for the repetitive and the many: variants, sheets, filler, retakes.</text>
-        <text class="sm" x="0" y="580">the art bible and a human eye are what keep it from looking like ai slop.</text>
+        <text x="0" y="360" style="font-size:40px;font-weight:500">Let's be honest: this is still the weak point of the whole process.</text>
+        <text x="0" y="440"><tspan fill="#C8DF00" font-weight="600">Humans</tspan> for decisions, direction, taste and concepts.</text>
+        <text x="0" y="500">AI tooling for the repetitive and the many: variants, sheets, filler, retakes.</text>
+        <text class="sm" x="0" y="580">The art bible and a human eye are what keep it from looking like AI slop. Nothing else does.</text>
       </g>
     </svg>
   </div>
-  <div class="footer"><span>09 · platform, engine and art</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>09 · Platform, engine and art</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 33 divider: state of the art -->
 <section class="slide divider" id="s-sota">
   <div class="num caption">10</div>
-  <div class="section-title">the state of the art</div>
+  <div class="section-title">The State of the Art</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 34 gravity drive demo -->
 <section class="slide" id="gravity">
-  <div class="titleblock"><div class="kicker">live demo · fallback ready</div><h1 class="title">gravity drive</h1></div>
+  <div class="titleblock"><div class="kicker">Live demo · fallback ready</div><h1 class="title">Gravity Drive</h1></div>
   <div class="content">
     <div style="display:flex;gap:48px;align-items:flex-start">
       <div class="demo" id="demo-gd">
-        <div class="media still" style="width:1180px"><img src="assets/img/gravity-drive-final.png" alt="the gravity drive, spinning, in its second containment chamber"></div>
-        <div class="launch" onclick="launchDemo('demo-gd')"><span>press enter or click · run it here, offline</span></div>
+        <div class="media still" style="width:1180px"><img src="assets/img/gravity-drive-final.png" alt="The gravity drive, spinning, in its second containment chamber"></div>
+        <div class="launch" onclick="launchDemo('demo-gd')"><span>Press Enter or click · runs right here, offline</span></div>
         <iframe hidden data-src="assets/demos/gravity-drive.html" allow="autoplay"></iframe>
       </div>
       <div>
         <div class="qr"><img src="assets/qr/gravity-drive.svg" alt=""></div>
         <div class="mono" style="margin-top:16px;width:400px">punkscience.ca/<br>gravity-drive/</div>
-        <div class="caption" style="margin-top:32px;width:400px">the event horizon drive and its second containment chamber. built twice: a parametric blender scene driven through blender mcp, and this single-file webgl demo.</div>
+        <div class="caption" style="margin-top:32px;width:400px">The drive from <i>Event Horizon</i> and its second containment chamber. Built twice: as a parametric Blender scene driven through Blender MCP, and as this single-file WebGL demo.</div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>10 · the state of the art</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>10 · The state of the art</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 35 two threads -->
 <section class="slide" id="threads">
-  <div class="titleblock"><div class="kicker">how it was made, the two parts that matter</div><h1 class="title">the agent sees its own frames</h1></div>
+  <div class="titleblock"><div class="kicker">How it was made: the two parts that matter</div><h1 class="title">The agent sees its own frames</h1></div>
   <div class="content">
     <div class="cols">
       <div class="well">
-        <div class="lead">1. it can look.</div>
-<pre class="term sm"><span class="c"># stills of one sequence state, for judging a change</span>
+        <div class="lead">1. It can look.</div>
+<pre class="term sm"><span class="c"># Stills of one sequence state, for judging a change</span>
 node tools/shot.mjs --state 2 --at 2,4,6,8 --out renders/breach
 
-<span class="c"># the reel, against a running server</span>
+<span class="c"># The reel, against a running server</span>
 node tools/capture.mjs --out renders/reel-60s.mp4 \
   --w 1080 --h 1920 --fps 30 --seconds 60
 
-<span class="c"># the blender half, through the mcp addon</span>
+<span class="c"># The Blender half, through the MCP addon</span>
 exec(open("blender/assemble_scene.py").read())
-<span class="c"># idempotent: purges and rebuilds the whole scene</span></pre>
-        <div class="caption mcap">render tools the agent wrote for itself. every look change gets judged from a frame, not from the code.</div>
+<span class="c"># Idempotent: purges and rebuilds the whole scene</span></pre>
+        <div class="caption mcap">Render tools the agent wrote for itself. Every change to the look gets judged from a frame, not from the code.</div>
       </div>
       <div class="well">
-        <div class="lead">2. one issue per task, unattended.</div>
-<pre class="term sm"><span class="c">AGENTS.md · workflow</span>
+        <div class="lead">2. One issue per task, unattended.</div>
+<pre class="term sm"><span class="c">AGENTS.md · Workflow</span>
 Nothing is worked on that is not an issue.
 
 1. gh issue list; pick the issue
-2. label: status: in progress
-3. branch off main: fix/&lt;slug&gt; or feature/&lt;slug&gt;
-4. do the work, commit there
-5. merge to main, push, close the issue
+2. Label: status: in progress
+3. Branch off main: fix/&lt;slug&gt; or feature/&lt;slug&gt;
+4. Do the work, commit there
+5. Merge to main, push, close the issue
 
 <span class="c">git log</span>
 <span class="s">New Feature:</span> access corridor, character controller
 <span class="s">New Feature:</span> thud on the ring lock; charge loop
   winds down through DECAY
 Fixes the charge loop level for the replaced charge.wav</pre>
-        <div class="caption mcap">the loop the agent runs without a human watching every step. the log is the audit trail.</div>
+        <div class="caption mcap">The loop the agent runs without a human watching every step. The log is the audit trail.</div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>10 · the state of the art</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>10 · The state of the art</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 36 failure -->
 <section class="slide" id="monster">
-  <div class="titleblock"><div class="kicker">the same tools, the same week</div><h1 class="title">what worked, and what did not</h1></div>
+  <div class="titleblock"><div class="kicker">The same tools, the same week</div><h1 class="title">What worked, and what did not</h1></div>
   <div class="content">
     <div class="cols">
       <div class="well">
-        <div class="media" style="width:852px"><img src="assets/img/monster-fail.png" alt="" onerror="this.parentNode.innerHTML='<div class=\'term sm\' style=\'height:479px;border:0\'><span class=\'c\'>blender + blender mcp · the monster</span>\n\nsix attempts at an organic creature.\nsculpting is not a thing an agent can do;\nit can only place primitives and hope.\n\n<span class=\'d\'>no usable render survived.</span></div>'"></div>
-        <div class="caption mcap danger">the monster: blender + blender mcp. no usable result.</div>
+        <div class="media" style="width:852px"><img src="assets/img/monster-fail.png" alt="" onerror="this.parentNode.innerHTML='<div class=\'term sm\' style=\'height:479px;border:0\'><span class=\'c\'>Blender + Blender MCP · the monster</span>\n\nSix attempts at an organic creature.\nSculpting is not a thing an agent can do.\nIt can place primitives and hope.\n\n<span class=\'d\'>No usable render survived.</span></div>'"></div>
+        <div class="caption mcap danger">The monster: Blender + Blender MCP. No usable result.</div>
       </div>
       <div class="well">
         <div class="media" style="width:852px"><img src="assets/img/gravity-drive-tumble-10s.png" alt=""></div>
-        <div class="caption mcap">the drive: parametric, numeric, judged from its own frames. shipped.</div>
+        <div class="caption mcap">The drive: parametric, numeric, judged from its own frames. Shipped.</div>
       </div>
     </div>
-    <div class="caption frag" style="position:absolute;bottom:0;left:0;width:1728px">geometry you can describe with numbers, the agent can build. geometry you have to sculpt, it cannot. that is the art verdict from two slides ago, with evidence.</div>
+    <div class="caption frag" style="position:absolute;bottom:0;left:0;width:1728px">Geometry you can describe with numbers, the agent can build. Geometry you have to sculpt, it can't. That's the art verdict from two slides ago — this time with evidence.</div>
   </div>
-  <div class="footer"><span>10 · the state of the art</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>10 · The state of the art</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 37 divider: back end -->
 <section class="slide divider" id="s-backend">
   <div class="num caption">11</div>
-  <div class="section-title">the back end</div>
+  <div class="section-title">The Back End</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 38 back end -->
 <section class="slide" id="backend">
-  <div class="titleblock"><div class="kicker">strictly speaking, a game only needs a game</div><h1 class="title">"i can't do server stuff" is over</h1></div>
+  <div class="titleblock"><div class="kicker">Strictly speaking, a game only needs a game</div><h1 class="title">"I can't do server stuff" is over</h1></div>
   <div class="content">
     <div class="cols">
       <ul class="tips">
-        <li class="frag"><b>a box</b> that is always on, or a tunnel to one. a $2 vm, a pi, a halifax host.</li>
-        <li class="frag"><b>an api</b> the agent scaffolds: rest or websocket, same session as the client.</li>
-        <li class="frag"><b>ci</b> that builds every push. snail's pace publishes an android build on every merge.</li>
-        <li class="frag"><b>a kill switch.</b> because live ops.</li>
-        <li class="frag"><b>a plan for success.</b> scale is a good problem, and the agent can read the bill.</li>
+        <li class="frag"><b>A box</b> that's always on, or a tunnel to one. A $2 VM, a Pi, a Halifax host.</li>
+        <li class="frag"><b>An API</b> the agent scaffolds: REST or WebSocket, same session as the client.</li>
+        <li class="frag"><b>CI</b> that builds every push. Snail's Pace publishes an Android build on every merge.</li>
+        <li class="frag"><b>A kill switch.</b> Because live ops.</li>
+        <li class="frag"><b>A plan for success.</b> Scale is a good problem to have, and the agent can read the bill.</li>
       </ul>
       <div class="well">
-        <div class="body">snail's pace has no server of its own. the race syncs between two phones over nostr relays, and the invite is a link the studio site serves. a protocol did the back end.</div>
+        <div class="body">Snail's Pace has no server of its own. The race syncs between two phones over Nostr relays, and the invite is a link the studio site serves. A protocol did the back end. That's not a trick — that's the point of a protocol.</div>
         <div class="qrs three" style="justify-content:start;gap:48px;margin-top:40px;grid-template-columns:repeat(3,200px)">
           <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/flyio.svg" alt=""></div><figcaption class="caption">fly.io</figcaption></figure>
-          <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/websavers.svg" alt=""></div><figcaption class="caption">websavers.ca<br>halifax, since 2004</figcaption></figure>
+          <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/websavers.svg" alt=""></div><figcaption class="caption">websavers.ca<br>Halifax, since 2004</figcaption></figure>
           <figure><div class="qr" style="width:200px;padding:16px"><img src="assets/qr/nostr.svg" alt=""></div><figcaption class="caption">nostr.com</figcaption></figure>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>11 · the back end</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>11 · The back end</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 39 divider: tips -->
 <section class="slide divider" id="s-tips">
   <div class="num caption">12</div>
-  <div class="section-title">prompt and context tips</div>
+  <div class="section-title">Prompt and Context Tips</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 40 tips 1 -->
 <section class="slide" id="tips1">
-  <div class="titleblock"><div class="kicker">the slide you photograph</div><h1 class="title">seven things i actually do</h1></div>
+  <div class="titleblock"><div class="kicker">The slide you photograph</div><h1 class="title">Seven things I actually do</h1></div>
   <div class="content">
     <ul class="tips">
-      <li><b>write</b> the plan to a file and point the agent at it. never re-explain in chat.</li>
-      <li><b>name</b> the layer you mean. "the hud", not "the score thing".</li>
-      <li><b>grill</b> before building. the agent asks; you answer; the plan closes.</li>
-      <li><b>commit</b> small. one issue per task, one branch per issue.</li>
-      <li><b>keep</b> agents.md current. it is the only memory that survives the session.</li>
-      <li><b>let</b> the agent see its own output: tests, renders, screenshots, logs.</li>
-      <li><b>pin</b> a model. experiment on auto, build on one you know.</li>
+      <li><b>Write</b> the plan to a file and point the agent at it. Never re-explain it in chat.</li>
+      <li><b>Name</b> the layer you mean. "The HUD," not "the score thing."</li>
+      <li><b>Grill</b> before building. The agent asks, you answer, the plan closes.</li>
+      <li><b>Commit</b> small. One issue per task, one branch per issue.</li>
+      <li><b>Keep</b> AGENTS.md current. It's the only memory that survives the session.</li>
+      <li><b>Let</b> the agent see its own output: tests, renders, screenshots, logs.</li>
+      <li><b>Pin</b> a model. Experiment on auto, build on one you know.</li>
     </ul>
   </div>
-  <div class="footer"><span>12 · prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>12 · Prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 41 tips 2 -->
 <section class="slide" id="tips2">
-  <div class="titleblock"><div class="kicker">and three more, about context itself</div><h1 class="title">knowledge that does not leak</h1></div>
+  <div class="titleblock"><div class="kicker">And three more, about context itself</div><h1 class="title">Knowledge that doesn't leak</h1></div>
   <div class="content">
     <ul class="tips">
-      <li><b>more</b> context is always better. more of the <span class="signal">right</span> context. read the plan, the gdd, the art bible, the last commit.</li>
-      <li><b>write</b> skills that update themselves. when the agent works something out the hard way, the last step is: write it to a skill. that knowledge is now yours, not the session's.</li>
-      <li><b>format</b> agent-facing text as simplified technical english. asd-ste100 is the standard aerospace uses so a maintenance instruction cannot be misread. an agent reading another agent is in the same position.</li>
+      <li><b>More</b> context is always better. More of the <span class="signal">right</span> context. Read the plan, the GDD, the art bible, the last commit.</li>
+      <li><b>Write</b> skills that update themselves. When the agent works something out the hard way, the last step is: write it to a skill. That knowledge is yours now, not the session's.</li>
+      <li><b>Format</b> agent-facing text as Simplified Technical English. ASD-STE100 is the standard aerospace uses so a maintenance instruction can't be misread. An agent reading another agent is in exactly the same position.</li>
     </ul>
     <div style="position:absolute;right:0;top:0">
       <div class="qr"><img src="assets/qr/asd-ste100.svg" alt=""></div>
-      <div class="caption" style="width:240px;text-align:center;margin-top:16px">asd-ste100 skill<br>danyuchn, mit</div>
+      <div class="caption" style="width:240px;text-align:center;margin-top:16px">asd-ste100 skill<br>danyuchn, MIT</div>
     </div>
   </div>
-  <div class="footer"><span>12 · prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>12 · Prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 42 context window -->
 <section class="slide" id="window">
-  <div class="titleblock"><div class="kicker">the counterweight to "more context"</div><h1 class="title">keep one eye on the window</h1></div>
+  <div class="titleblock"><div class="kicker">The counterweight to "more context"</div><h1 class="title">Keep one eye on the window</h1></div>
   <div class="content">
     <ul class="tips">
-      <li class="frag"><b>it fills</b> faster than you think. every file read, every tool result, every screenshot is in there.</li>
-      <li class="frag"><b>watch</b> the status line. the harness tells you how much is left; nobody reads it until it is gone.</li>
-      <li class="frag"><b>compaction</b> is lossy. when the harness summarises to make room, the detail you cared about is what goes.</li>
-      <li class="frag"><b>hand off</b> instead of pushing on. write the state to a file, start a fresh session, point it at the file.</li>
-      <li class="frag"><b>scrollback</b> is not context. the plan in the repo is context. the argument you had an hour ago is not.</li>
+      <li class="frag"><b>It fills</b> faster than you think. Every file read, every tool result, every screenshot is in there.</li>
+      <li class="frag"><b>Watch</b> the status line. The harness tells you how much is left. Nobody reads it until it's gone.</li>
+      <li class="frag"><b>Compaction</b> is lossy. When the harness summarizes to make room, the detail you cared about is exactly what goes.</li>
+      <li class="frag"><b>Hand off</b> instead of pushing on. Write the state to a file, start a fresh session, point it at the file.</li>
+      <li class="frag"><b>Scrollback</b> is not context. The plan in the repo is context. The argument you had an hour ago is not.</li>
     </ul>
   </div>
-  <div class="footer"><span>12 · prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>12 · Prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 43 anti-tip -->
 <section class="slide stmt" id="wish">
-  <div class="statement">"make me a game"<br>is not a prompt.<br>it is a <span class="signal">wish</span>.</div>
-  <div class="footer"><span>12 · prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="statement">"Make me a game"<br>is not a prompt.<br>It's a <span class="signal">wish</span>.</div>
+  <div class="footer"><span>12 · Prompt and context tips</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 44 divider: sovereignty -->
 <section class="slide divider" id="s-sov">
   <div class="num caption">13</div>
-  <div class="section-title">sovereignty, and why<br>it's a thing now</div>
+  <div class="section-title">Sovereignty, and Why<br>It's a Thing Now</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 45 risks -->
 <section class="slide" id="risks">
-  <div class="titleblock"><div class="kicker">three risks and one hedge</div><h1 class="title">whose model is it anyway</h1></div>
+  <div class="titleblock"><div class="kicker">Three risks and one hedge</div><h1 class="title">Whose model is it, anyway?</h1></div>
   <div class="content">
     <ul class="tips">
-      <li class="frag"><b>your ip crosses a border</b> on every api call. in a trade war, a model can become an illegal export overnight. there is no local copy of claude.</li>
-      <li class="frag"><b>the provider can change the deal.</b> terms, pricing, what they train on. meta's contributor tier trains on your sessions. are you happy training their models with your ideas?</li>
-      <li class="frag"><b>the model can be retired.</b> the one your skills were tuned to. deepseek's api sends your repo to a company that answers to beijing. are you fine with that?</li>
-      <li class="frag"><b>the hedge:</b> keep the plan, the skills and the context in <span class="signal">your own repo</span>, so any model can pick them up. know how to run an open-weights model locally, even if you rarely do.</li>
+      <li class="frag"><b>Your IP crosses a border</b> on every API call. In a trade war, a model can become an illegal export overnight. There is no local copy of Claude.</li>
+      <li class="frag"><b>The provider can change the deal.</b> Terms, pricing, what they train on. Meta's contributor tier trains on your sessions. Do you want to train their models with your ideas?</li>
+      <li class="frag"><b>The model can be retired.</b> The one your skills were tuned to. And DeepSeek's API sends your repo to a company that answers to Beijing. Are you fine with that?</li>
+      <li class="frag"><b>The hedge:</b> keep the plan, the skills and the context in <span class="signal">your own repo</span>, so any model can pick them up. Know how to run an open-weights model locally, even if you rarely do.</li>
     </ul>
   </div>
-  <div class="footer"><span>13 · sovereignty</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>13 · Sovereignty</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 46 statement -->
 <section class="slide stmt" id="runs">
-  <div class="statement">where the model runs<br>decides who sees <span class="signal">your work</span>.</div>
-  <div class="footer"><span>13 · sovereignty · open weights on your own box send nothing anywhere. the hosted app is the risk, not the weights.</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="statement">Where the model runs<br>decides who sees <span class="signal">your work</span>.</div>
+  <div class="footer"><span>13 · Sovereignty · Open weights on your own box send nothing anywhere. The hosted app is the risk, not the weights.</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 47 divider: close -->
 <section class="slide divider" id="s-close">
   <div class="num caption">14</div>
-  <div class="section-title">start tonight</div>
+  <div class="section-title">Start Tonight</div>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
 <!-- 48 oneill demo -->
 <section class="slide" id="oneill">
-  <div class="titleblock"><div class="kicker">live demo · fallback ready</div><h1 class="title">o'neill, orbital taxi</h1></div>
+  <div class="titleblock"><div class="kicker">Live demo · fallback ready</div><h1 class="title">O'Neill: Orbital Taxi</h1></div>
   <div class="content">
     <div style="display:flex;gap:48px;align-items:flex-start">
       <div>
-        <div class="media still" style="width:1180px"><img src="assets/img/oneill-flight.png" alt="a yellow cab approaches the open end of an o'neill cylinder above earth"></div>
+        <div class="media still" style="width:1180px"><img src="assets/img/oneill-flight.png" alt="A yellow cab approaches the open end of an O'Neill cylinder above Earth"></div>
       </div>
       <div>
-        <div class="caption" style="width:400px">a three.js prototype in the spirit of space taxi and lunar lander, inside a procedurally modelled o'neill cylinder. begin outside with earth behind you, fly the arrival corridor, land on the pads inside.<br><br>planned, grilled, built, tested and art-directed the way this talk describes. a few weeks of evenings.</div>
-        <div class="caption" style="width:400px;margin-top:32px">keyboard: w/s thrust, arrows aim, space/ctrl trim. a controller works too.</div>
+        <div class="caption" style="width:400px">A three.js prototype in the spirit of <i>Space Taxi</i> and <i>Lunar Lander</i>, inside a procedurally modelled O'Neill cylinder. You start outside with Earth behind you, fly the arrival corridor, and land on the pads inside.<br><br>Planned, grilled, built, tested and art-directed exactly the way this talk describes. A few weeks of evenings, and yes, a few burnt steaks.</div>
+        <div class="caption" style="width:400px;margin-top:32px">Keyboard: W/S thrust, arrows aim, Space/Ctrl trim. A controller works too.</div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>14 · start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>14 · Start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 49 start tonight -->
 <section class="slide" id="tonight">
-  <div class="titleblock"><div class="kicker">five steps, one evening</div><h1 class="title">what to do when you get home</h1></div>
+  <div class="titleblock"><div class="kicker">Five steps, one evening</div><h1 class="title">What to do when you get home</h1></div>
   <div class="content">
     <ul class="tips">
-      <li class="frag"><b>install</b> one terminal harness. claude code, codex, opencode or pi. just one.</li>
-      <li class="frag"><b>clone</b> the skills from the qr wall on the next slide. read two of them.</li>
-      <li class="frag"><b>make</b> a folder. init it. everything about the game lives in there from now on.</li>
-      <li class="frag"><b>brainstorm</b> a one-page gdd, then let the agent grill you until it closes.</li>
-      <li class="frag"><b>build</b> the smallest playable thing that runs in a browser. one mechanic. then the ring turns.</li>
+      <li class="frag"><b>Install</b> one terminal harness. Claude Code, Codex, OpenCode or Pi. Just one.</li>
+      <li class="frag"><b>Clone</b> the skills from the QR wall on the next slide. Read two of them.</li>
+      <li class="frag"><b>Make</b> a folder. Init it. Everything about the game lives in there from now on.</li>
+      <li class="frag"><b>Brainstorm</b> a one-page GDD, then let the agent grill you until it closes.</li>
+      <li class="frag"><b>Build</b> the smallest playable thing that runs in a browser. One mechanic. Then the ring turns.</li>
     </ul>
   </div>
-  <div class="footer"><span>14 · start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>14 · Start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 50 links wall -->
 <section class="slide" id="links">
-  <div class="titleblock"><div class="kicker">every link from the talk, in one place</div><h1 class="title">links</h1></div>
+  <div class="titleblock"><div class="kicker">Every link from the talk, in one place</div><h1 class="title">Links</h1></div>
   <div class="content">
     <div class="qrs tight">
-      <figure><div class="qr"><img src="assets/qr/talk-repo.svg" alt=""></div><figcaption class="caption">this talk, skills, agents<br>github</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/gravity-drive.svg" alt=""></div><figcaption class="caption">gravity drive, live<br>punkscience.ca</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/herdr.svg" alt=""></div><figcaption class="caption">herdr<br>agent multiplexer</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/openrouter.svg" alt=""></div><figcaption class="caption">openrouter<br>one key, every model</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/pi.svg" alt=""></div><figcaption class="caption">pi.dev<br>the minimal harness</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/opencode.svg" alt=""></div><figcaption class="caption">opencode<br>open source</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/agent-skills.svg" alt=""></div><figcaption class="caption">agent-skills<br>apt, choco, wiki</figcaption></figure>
-      <figure><div class="qr"><img src="assets/qr/punkscience.svg" alt=""></div><figcaption class="caption">punkscience.ca<br>the studio</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/talk-repo.svg" alt=""></div><figcaption class="caption">This talk, skills, agents<br>GitHub</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/gravity-drive.svg" alt=""></div><figcaption class="caption">Gravity Drive, live<br>punkscience.ca</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/herdr.svg" alt=""></div><figcaption class="caption">herdr<br>Agent multiplexer</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/openrouter.svg" alt=""></div><figcaption class="caption">OpenRouter<br>One key, every model</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/pi.svg" alt=""></div><figcaption class="caption">pi.dev<br>The minimal harness</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/opencode.svg" alt=""></div><figcaption class="caption">OpenCode<br>Open source</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/agent-skills.svg" alt=""></div><figcaption class="caption">agent-skills<br>APT, Chocolatey, wiki</figcaption></figure>
+      <figure><div class="qr"><img src="assets/qr/punkscience.svg" alt=""></div><figcaption class="caption">punkscience.ca<br>The studio</figcaption></figure>
     </div>
   </div>
-  <div class="footer"><span>14 · start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>14 · Start tonight</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 <!-- 51 questions -->
 <section class="slide q" id="questions">
-  <div class="section-title">questions.</div>
+  <div class="section-title">Questions.</div>
   <div class="contact">
-    <div class="body">darryl wright<br>punk.science<br><span class="dim">halifax, nova scotia</span></div>
+    <div class="body">Darryl Wright<br>punk.science<br><span class="dim">Halifax, Nova Scotia</span></div>
     <div class="qr"><img src="assets/qr/talk-repo.svg" alt=""></div>
-    <div class="caption" style="width:240px;text-align:center;margin-top:16px">the talk, the skills,<br>the agents</div>
+    <div class="caption" style="width:240px;text-align:center;margin-top:16px">The talk, the skills,<br>the agents</div>
   </div>
-  <div class="footer"><span>ai + gamedev · punk.science · 2026</span><span class="dots"><i></i><i></i><i></i></span></div>
+  <div class="footer"><span>AI + Gamedev · punk.science · 2026</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
 
 </div>
