@@ -29,9 +29,9 @@
   <div class="titleblock"><div class="kicker">Before we start</div><h1 class="title">What I'm going to skip</h1></div>
   <div class="content">
     <ul class="tips">
-      <li class="frag"><b>What an LLM is</b> and how it works. You've heard it. You've probably heard it twice.</li>
-      <li class="frag"><b>Chatbots</b> and the prompt-and-response loop. This talk is about the other loop.</li>
-      <li class="frag"><b>Third-party publishing.</b> That's a different talk, and frankly a different decade.</li>
+      <li class="frag"><b>What an LLM is</b> and how it works.</li>
+      <li class="frag"><b>Chatbots</b> and the prompt-and-response loop.</li>
+      <li class="frag"><b>Third-party publishing.</b></li>
     </ul>
   </div>
   <div class="footer"><span>AI + Gamedev · punk.science</span><span class="dots"><i></i><i></i><i></i></span></div>
@@ -39,7 +39,7 @@
 
 <!-- 3 cover -->
 <section class="slide" id="cover">
-  <div class="titleblock"><div class="kicker">Forty-five minutes, then fifteen of questions</div><h1 class="title">What we're going to cover</h1></div>
+  <div class="titleblock"><div class="kicker">Forty-five minutes + fifteen minutes for questions</div><h1 class="title">What we're going to cover</h1></div>
   <div class="content">
     <div class="cols">
       <ul class="tips dense">
@@ -61,7 +61,7 @@
         <li>Questions</li>
       </ul>
     </div>
-    <div class="lead" style="position:absolute;bottom:0;left:0"><span class="signal">AI does not one-shot a game.</span> It accelerates a discipline. That's the whole talk — the rest is evidence.</div>
+    <div class="lead" style="position:absolute;bottom:0;left:0"><span class="signal">You could one-shot a game, but game developers care more.</span> AI accelerates a well-honed discipline.</div>
   </div>
   <div class="footer"><span>AI + Gamedev · punk.science</span><span class="dots"><i></i><i></i><i></i></span></div>
 </section>
@@ -75,43 +75,59 @@
 
 <!-- 5 ring -->
 <section class="slide" id="ring">
-  <div class="titleblock"><div class="kicker">Same stages. Faster. Alone, if you have to.</div><h1 class="title">The same ring, on fast-forward</h1></div>
+  <div class="titleblock"><div class="kicker">Same stages. Every one of them faster. Alone, if you have to.</div><h1 class="title">The same ring, on fast-forward</h1></div>
   <div class="content">
     <svg viewBox="0 0 1728 660" width="1728" height="660">
-      <g transform="translate(480,330)" fill="none" stroke-width="28" stroke-linecap="butt">
-        <path stroke="#7A8800" d="M 0 -260 A 260 260 0 0 1 237.5 -105.7"/>
-        <path stroke="#7A8800" d="M 247.3 -80.3 A 260 260 0 0 1 174.0 193.2"/>
-        <path stroke="#7A8800" d="M 152.8 210.3 A 260 260 0 0 1 -130 225.2"/>
-        <path stroke="#7A8800" d="M -152.8 210.3 A 260 260 0 0 1 -254.3 54.1"/>
-        <path stroke="#7A8800" d="M -247.3 -80.3 A 260 260 0 0 1 -130 -225.2"/>
-        <path class="frag" stroke="#C8DF00" d="M 0 -260 A 260 260 0 0 1 237.5 -105.7"/>
-        <path class="frag" stroke="#C8DF00" d="M 247.3 -80.3 A 260 260 0 0 1 174.0 193.2"/>
-        <path class="frag" stroke="#C8DF00" d="M -152.8 210.3 A 260 260 0 0 1 -254.3 54.1"/>
-      </g>
-      <g transform="translate(480,330)">
-        <text x="180" y="-250">Ideation</text>
-        <text x="300" y="90">Preproduction</text>
-        <text x="16" y="318" text-anchor="middle">Production</text>
-        <text x="-300" y="120" text-anchor="end">Deployment</text>
-        <text x="-250" y="-200" text-anchor="end">Live ops</text>
-        <text class="sm" x="-30" y="-290" text-anchor="end">The ring never closes</text>
-      </g>
-      <g transform="translate(1000,0)">
-        <text class="sm" y="40">Ideation · planning · prototyping · design</text>
-        <text class="sm" y="80">Vertical slice · alpha · beta · gold (RIP) · soft launch</text>
-        <text class="sm" y="120">Building and iteration · QA · art direction</text>
-        <text class="sm" y="160">Source control · CI/CD · publishing · DLC · kill switches</text>
-        <text class="sm" y="200">Live ops: patches, seasons, telemetry, the next version</text>
+      <g transform="translate(620,310)" fill="none" stroke-width="28" stroke-linecap="butt">
+        <path stroke="#7A8800" d="M 0.0 -220.0 A 220 220 0 0 1 201.0 -89.5"/>
+        <path stroke="#7A8800" d="M 209.2 -68.0 A 220 220 0 0 1 147.2 163.5"/>
+        <path stroke="#7A8800" d="M 129.3 178.0 A 220 220 0 0 1 -110.0 190.5"/>
+        <path stroke="#7A8800" d="M -129.3 178.0 A 220 220 0 0 1 -215.2 -45.7"/>
+        <path stroke="#7A8800" d="M -209.2 -68.0 A 220 220 0 0 1 -110.0 -190.5"/>
         <g class="frag">
-          <rect x="0" y="270" width="28" height="28" fill="#C8DF00"/>
-          <text x="48" y="293">Where AI compresses time</text>
-          <text class="sm" x="48" y="333">Ideation · prototyping · boilerplate · CI scripting</text>
-          <rect x="0" y="390" width="28" height="28" fill="#7A8800"/>
-          <text x="48" y="413">Where it does not</text>
-          <text class="sm" x="48" y="453">Design taste · QA judgement · art direction ·</text>
-          <text class="sm" x="48" y="487">publishing relationships</text>
-          <text class="sm" x="0" y="570">Every stage still happens. It happens in days now,</text>
-          <text class="sm" x="0" y="604">and one person can run the whole ring. I have.</text>
+        <path stroke="#C8DF00" d="M 0.0 -220.0 A 220 220 0 0 1 201.0 -89.5"/>
+        <path stroke="#C8DF00" d="M 209.2 -68.0 A 220 220 0 0 1 147.2 163.5"/>
+        <path stroke="#C8DF00" d="M 129.3 178.0 A 220 220 0 0 1 -110.0 190.5"/>
+        <path stroke="#C8DF00" d="M -129.3 178.0 A 220 220 0 0 1 -215.2 -45.7"/>
+        <path stroke="#C8DF00" d="M -209.2 -68.0 A 220 220 0 0 1 -110.0 -190.5"/>
+        </g>
+      </g>
+      <g transform="translate(620,310)">
+        <text x="140" y="-236">Ideation</text>
+        <text class="sm" x="140" y="-202">Inspiration strikes anywhere,</text>
+        <text class="sm" x="140" y="-172">at any time</text>
+        <text x="266" y="4">Preproduction</text>
+        <text class="sm" x="266" y="38">Planning · prototyping</text>
+        <text class="sm" x="266" y="68">Design</text>
+        <text x="0" y="278" text-anchor="middle">Production</text>
+        <text class="sm" x="0" y="312" text-anchor="middle">Vertical slice · alpha · beta · gold (RIP) · soft launch</text>
+        <text class="sm" x="0" y="342" text-anchor="middle">Building and iteration · QA · art direction</text>
+        <text x="-266" y="4" text-anchor="end">Deployment</text>
+        <text class="sm" x="-266" y="38" text-anchor="end">Source control · CI/CD</text>
+        <text class="sm" x="-266" y="68" text-anchor="end">Publishing · DLC · kill switches</text>
+        <text x="-150" y="-236" text-anchor="end">Live ops</text>
+        <text class="sm" x="-150" y="-202" text-anchor="end">Patches · seasons · the next version</text>
+        <text class="sm" x="0" y="-8" text-anchor="middle" fill="#C8DF00">The ring never closes.</text>
+        <text class="sm" x="0" y="22" text-anchor="middle">Live ops runs straight into the next idea.</text>
+      </g>
+      <g transform="translate(1220,100)">
+        <g class="frag">
+          <rect x="0" y="0" width="28" height="28" fill="#C8DF00"/>
+          <text x="48" y="23">Every stage still happens.</text>
+          <text class="sm" x="48" y="63">Ideas, plans, code, art, builds, ops. None of</text>
+          <text class="sm" x="48" y="93">them go away. AI compresses all five, and</text>
+          <text class="sm" x="48" y="123">Production most of all: that is where the code</text>
+          <text class="sm" x="48" y="153">gets written and rewritten, in code and in art.</text>
+        </g>
+        <g class="frag">
+          <rect x="0" y="220" width="28" height="28" fill="#F0EDE4"/>
+          <text x="48" y="243">What stays human, in every stage.</text>
+          <text class="sm" x="48" y="283">Taste. The design call. Knowing a build is</text>
+          <text class="sm" x="48" y="313">good enough. Art direction. The publisher</text>
+          <text class="sm" x="48" y="343">relationship. The decision to ship.</text>
+          <text class="sm" x="48" y="403">Gold is dead. Ship-and-forget is dead. The</text>
+          <text class="sm" x="48" y="433">ring turns in days now. One person can turn it.</text>
+          <text class="sm" x="48" y="463">I have. That is what this talk is about.</text>
         </g>
       </g>
     </svg>
