@@ -16,6 +16,8 @@ install.ps1 the same, for PowerShell
 
 Open `deck/index.html`. You do not need a server. Fonts, images and QR codes are local files.
 
+If you only want to read the talk, open `presentation.pdf` at the repository root. It is the full deck, fifty slides, one page each.
+
 | Key | Action |
 |---|---|
 | Right arrow, Page Down, Space, Enter | next build step, then next slide |
