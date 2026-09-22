@@ -6,7 +6,6 @@
   const slides = Array.from(document.querySelectorAll('.slide'));
   const counter = document.getElementById('counter');
   let i = 0;
-  let pendingEnter = false;
 
   const hashIndex = () => {
     const n = parseInt(location.hash.replace('#', ''), 10);
@@ -29,17 +28,9 @@
     // pause any video on other slides, play autoplay video on this one
     document.querySelectorAll('video').forEach(v => { if (!slides[i].contains(v)) v.pause(); });
     slides[i].querySelectorAll('video[data-autoplay]').forEach(v => v.play().catch(() => {}));
-    // demo iframes load only when launched (see launchDemo in index.html); unload when leaving the slide
-    document.querySelectorAll('.demo.live').forEach(d => {
-      if (slides[i].contains(d)) return;
-      const f = d.querySelector('iframe'); f.dataset.src = f.src; f.removeAttribute('src'); f.hidden = true; d.classList.remove('live');
-    });
   }
 
   function next() {
-    // on a demo slide, Enter launches the demo before advancing
-    const demo = slides[i].querySelector('.demo:not(.live)');
-    if (demo && pendingEnter) { pendingEnter = false; window.launchDemo(demo.id); return; }
     const fr = fragments(slides[i]).filter(f => !f.classList.contains('on'));
     if (fr.length) { fr[0].classList.add('on'); return; }
     if (i < slides.length - 1) show(i + 1);
@@ -59,12 +50,11 @@
 
   document.addEventListener('keydown', e => {
     if (e.target && ['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
-    // do not swallow keys when a demo iframe has focus (they take focus themselves)
     switch (e.key) {
       case 'ArrowRight': case 'PageDown': case ' ': case 'Enter': case 'ArrowDown':
-        e.preventDefault(); pendingEnter = (e.key === 'Enter');
+        e.preventDefault();
         if (document.body.classList.contains('overview')) { show(i + 1); } else next();
-        pendingEnter = false; break;
+        break;
       case 'ArrowLeft': case 'PageUp': case 'Backspace': case 'ArrowUp':
         e.preventDefault(); if (document.body.classList.contains('overview')) { show(i - 1); } else prev(); break;
       case 'Home': e.preventDefault(); show(0); break;

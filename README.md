@@ -16,6 +16,8 @@ install.ps1 the same, for PowerShell
 
 Open `deck/index.html`. You do not need a server. Fonts, images and QR codes are local files.
 
+If you only want to read the talk, open `presentation.pdf` at the repository root. It is the full deck, fifty slides, one page each.
+
 | Key | Action |
 |---|---|
 | Right arrow, Page Down, Space, Enter | next build step, then next slide |
@@ -28,7 +30,7 @@ Open `deck/index.html`. You do not need a server. Fonts, images and QR codes are
 
 A Microsoft presentation clicker sends Page Down and Page Up. Both work.
 
-The gravity drive slide runs the demo inside the deck, offline, from `deck/assets/demos/gravity-drive.html`. The live version is at https://punkscience.ca/gravity-drive/.
+The gravity drive slide shows screenshots of the demo. The live version, playable in the browser, is at https://punkscience.ca/gravity-drive/.
 
 The art direction for the deck is in `deck/deck-docs/art-bible.md`. The `art` agent in this repository wrote it. Sources for every number on the slides are in `deck/deck-docs/research.md`, dated 2026-09-20.
 

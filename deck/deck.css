@@ -126,14 +126,6 @@ svg .bd { stroke: var(--signal); stroke-width: 2; stroke-dasharray: 16 12; }
 .title-slide .talk { position: absolute; left: 240px; top: 470px; }
 .title-slide .who { position: absolute; left: 240px; top: 880px; }
 
-/* demo */
-.demo { position: relative; }
-.demo iframe { width: 1180px; height: 664px; border: 2px solid var(--border); background: var(--ground); display: block; }
-.demo .launch { position: absolute; left: 0; top: 0; width: 1180px; height: 664px; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px; cursor: pointer; }
-.demo .launch span { background: var(--ground); border: 2px solid var(--signal); color: var(--signal); font: 600 26px/1 var(--text-face); padding: 16px 24px; letter-spacing: .08em; }
-.demo.live .launch, .demo.live .still { display: none; }
-.demo iframe[hidden] { display: none; }
-
 /* questions */
 .q .section-title { position: absolute; left: 96px; top: 200px; }
 .q .contact { position: absolute; left: 1200px; top: 220px; }
