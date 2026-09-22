@@ -637,16 +637,12 @@ Scenario: a check-in after a walk
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
-<!-- 34 gravity drive demo -->
+<!-- 34 gravity drive -->
 <section class="slide" id="gravity">
-  <div class="titleblock"><div class="kicker">Live demo · fallback ready</div><h1 class="title">Gravity Drive</h1></div>
+  <div class="titleblock"><div class="kicker">An in-house tech demo · the live version is at the link</div><h1 class="title">Gravity Drive</h1></div>
   <div class="content">
     <div style="display:flex;gap:48px;align-items:flex-start">
-      <div class="demo" id="demo-gd">
-        <div class="media still" style="width:1180px"><img src="assets/img/gravity-drive-final.png" alt="The gravity drive, spinning, in its second containment chamber"></div>
-        <div class="launch" onclick="launchDemo('demo-gd')"><span>Press Enter or click · runs right here, offline</span></div>
-        <iframe hidden data-src="assets/demos/gravity-drive.html" allow="autoplay"></iframe>
-      </div>
+      <div class="media still" style="width:1180px"><img src="assets/img/gravity-drive-final.png" alt="The gravity drive, spinning, in its second containment chamber"></div>
       <div>
         <div class="qr"><img src="assets/qr/gravity-drive.svg" alt=""></div>
         <div class="mono" style="margin-top:16px;width:400px">punkscience.ca/<br>gravity-drive/</div>
@@ -846,9 +842,9 @@ Fixes the charge loop level for the replaced charge.wav</pre>
   <div class="dots big"><i></i><i></i><i></i></div>
 </section>
 
-<!-- 48 oneill demo -->
+<!-- 48 oneill -->
 <section class="slide" id="oneill">
-  <div class="titleblock"><div class="kicker">Live demo · fallback ready</div><h1 class="title">O'Neill: Orbital Taxi</h1></div>
+  <div class="titleblock"><div class="kicker">Planned, grilled, built, tested and art-directed with this workflow</div><h1 class="title">O'Neill: Orbital Taxi</h1></div>
   <div class="content">
     <div style="display:flex;gap:48px;align-items:flex-start">
       <div>
@@ -894,14 +890,6 @@ Fixes the charge loop level for the replaced charge.wav</pre>
 
 </div>
 <div id="counter"></div>
-<script>
-function launchDemo(id) {
-  const d = document.getElementById(id);
-  const f = d.querySelector('iframe');
-  if (f.dataset.src) { f.src = f.dataset.src; f.removeAttribute('data-src'); }
-  f.hidden = false; d.classList.add('live'); f.focus();
-}
-</script>
 <script src="deck.js"></script>
 </body>
 </html>
