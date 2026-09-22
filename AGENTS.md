@@ -27,7 +27,7 @@ Slide deck and companion artifacts for "ai + gamedev" — a talk by Darryl Wrigh
 ## Project structure
 
 - `deck/` — the slides. `index.html` (all slide content), `deck.css`, `deck.js`
-  - `assets/` — fonts, images, QR codes, `demos/gravity-drive.html` (live demo embedded in a slide)
+  - `assets/` — fonts, images, QR codes
   - `deck-docs/` — `art-bible.md` (deck art direction, enforced constraints), `research.md` (sources for every number on the slides, dated)
   - `tools/` — `shoot.mjs` slide screenshot tool
 - `agents/` — subagent definitions: `art.md` (art director), `unity-engineer.md` (Unity systems engineer)
@@ -35,7 +35,7 @@ Slide deck and companion artifacts for "ai + gamedev" — a talk by Darryl Wrigh
 
 ## Conventions
 
-- **Offline is a hard constraint:** all deck assets are local files — no CDNs, no external fetches at view time
+- **Offline is a hard constraint:** all deck assets are local files — no CDNs, no external fetches at view time. `presentation.pdf` at the repo root is the deck, exported for reading without a browser
 - **README install section is written in ASD-STE100 Simplified Technical English** so agents can follow it without a human — preserve that register when editing
 - **Line endings:** `.gitattributes` forces LF for text (`*.sh`, `*.ps1` explicitly), binary treatment for PNG/WOFF2
 - **Installer contract:** installers write only this repo's entries into target dirs, replacing whole skill directories; they never delete anything not owned by this repo — keep that guarantee intact when modifying
@@ -50,5 +50,5 @@ Slide deck and companion artifacts for "ai + gamedev" — a talk by Darryl Wrigh
 ## Notes
 
 - After editing a skill or agent, remember installed copies elsewhere (e.g. `~/.agents`, `~/.claude`) go stale — rerunning the installer refreshes them
-- Live version of the embedded demo: https://punkscience.ca/gravity-drive/
+- Live version of the demo shown on the Gravity Drive slide: https://punkscience.ca/gravity-drive/
 - Deck keyboard nav supports presentation clickers (Page Down/Page Up); check `deck.js` after touching navigation code
